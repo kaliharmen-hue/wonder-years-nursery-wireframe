@@ -1,0 +1,271 @@
+---
+const rooms = [
+  { title: 'Ladybirds and Dragonflies', age: 'Babies and younger toddlers', text: 'Our separate baby unit provides a nurturing environment for children from six weeks to around two years old, with care and routines shaped around each child.' },
+  { title: 'Bumble Bees and Caterpillars', age: 'Two to three years', text: 'These rooms support children as their confidence, independence, communication and curiosity continue to grow.' },
+  { title: 'Grasshoppers', age: 'Three years and over', text: 'Our preschool room offers new challenges and opportunities while helping children build the confidence and skills they will need when they move on to school.' },
+  { title: 'School-holiday care', age: 'Up to Year 6', text: 'We also welcome school-age children during the school holidays, subject to availability.' }
+];
+
+const benefits = [
+  { title: 'Stay connected with Famly', text: 'The Famly app helps parents stay connected through messages, photographs, video observations and updates about meals, sleep, activities, learning and everyday care.' },
+  { title: 'Freshly prepared food', text: 'Meals, snacks and drinks are provided by the nursery and prepared on the premises by the nursery cook. Allergies and dietary requirements are catered for.' },
+  { title: 'Safeguarding comes first', text: 'All staff receive safeguarding training, supported by regular updates and knowledge checks. The nursery has a designated safeguarding team led by Mandy Barker.' },
+  { title: 'Individual support', text: 'Children with SEND or additional needs are supported according to their individual needs. Kirsty Burke is the nursery SENDCO.' }
+];
+---
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Homepage wireframe for The Wonder Years Day Nursery in Wednesbury." />
+    <title>The Wonder Years Day Nursery | Homepage wireframe</title>
+    <link rel="stylesheet" href={`${import.meta.env.BASE_URL}styles/global.css`} />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="wireframe-banner">Homepage wireframe · Content and layout for review</div>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="The Wonder Years Day Nursery home">
+          <span class="logo-placeholder">LOGO</span>
+          <span>The Wonder Years<br /><small>Day Nursery</small></span>
+        </a>
+        <button class="menu-button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+        <nav id="main-nav" class="main-nav" aria-label="Primary navigation">
+          <a href="#about">About us</a>
+          <a href="#rooms">Our rooms</a>
+          <a href="#learning">Learning & care</a>
+          <a href="#funding">Fees & funding</a>
+          <a href="#visit">Contact</a>
+          <a class="button button-small" href="#visit">Arrange a visit</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section id="top" class="hero section">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">The Wonder Years Day Nursery · Wednesbury</p>
+            <h1>Our care starts at the front door</h1>
+            <p class="lead">Warm, flexible childcare in Wednesbury for children from six weeks old, with school-holiday care available up to Year 6.</p>
+            <p class="opening-hours"><strong>Open Monday to Friday, 7.30am to 6pm.</strong></p>
+            <div class="button-row">
+              <a class="button" href="#visit">Arrange a visit</a>
+              <a class="button button-secondary" href="#rooms">Explore our nursery</a>
+            </div>
+          </div>
+          <div class="image-placeholder hero-image" role="img" aria-label="Placeholder for a warm nursery photograph">
+            <span>Hero image placeholder</span>
+            <small>Real nursery photograph or carefully selected stock image</small>
+          </div>
+        </div>
+        <div class="container trust-strip" aria-label="Key nursery information">
+          <span>Ofsted rated Good</span>
+          <span>Funded childcare from nine months</span>
+          <span>Flexible sessions</span>
+          <span>Freshly prepared meals</span>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container split-grid">
+          <div>
+            <p class="eyebrow">Welcome to The Wonder Years</p>
+            <h2>A nursery where every child is known</h2>
+            <p>Choosing a nursery is a big decision. You want somewhere your child will feel safe, settled and understood, where the team takes the time to know them as an individual.</p>
+            <p>At The Wonder Years Day Nursery, care is shaped around each child rather than expecting every child to fit the same routine. The team observes children’s interests, development and next steps, using these to plan activities and learning opportunities that support their progress.</p>
+            <p>From a baby’s first settling-in visit to helping older children prepare for school, the aim is to give every child the security, encouragement and support they need to grow in confidence.</p>
+            <a class="text-link" href="#">Learn more about us →</a>
+          </div>
+          <div class="image-placeholder portrait" role="img" aria-label="Placeholder for a genuine nursery image">
+            <span>Supporting image placeholder</span>
+            <small>Staff member engaging with a child or preparing an activity</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-muted">
+        <div class="container">
+          <p class="eyebrow">Essential information</p>
+          <h2>Childcare designed to work around family life</h2>
+          <div class="facts-grid">
+            <article><h3>Ages</h3><p>Childcare from six weeks old, with school-holiday care available up to Year 6.</p></article>
+            <article><h3>Opening hours</h3><p>Monday to Friday, 7.30am to 6pm. Open throughout the year apart from bank holidays, Christmas Eve and New Year’s Eve.</p></article>
+            <article><h3>Sessions</h3><p>Full-day care, five-hour sessions and hourly childcare, subject to availability.</p></article>
+            <article><h3>Funded places</h3><p>Government-funded childcare is available from nine months old for eligible families.</p></article>
+          </div>
+          <p class="notice">Availability varies by age group and required sessions. Families are encouraged to visit and reserve their place early, as the nursery often accepts bookings around 12 months ahead.</p>
+          <a class="button button-secondary" href="#funding">View sessions and funding</a>
+        </div>
+      </section>
+
+      <section id="rooms" class="section">
+        <div class="container">
+          <p class="eyebrow">Our rooms</p>
+          <h2>The right environment for every stage</h2>
+          <p class="section-intro">The nursery has separate spaces for babies, toddlers and preschool children, allowing each room to provide routines, activities and resources suited to that stage of development.</p>
+          <div class="cards-grid rooms-grid">
+            {rooms.map((room) => (
+              <article class="card room-card">
+                <div class="image-placeholder card-image"><span>Room image</span></div>
+                <div class="card-body">
+                  <p class="card-kicker">{room.age}</p>
+                  <h3>{room.title}</h3>
+                  <p>{room.text}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+          <a class="button button-secondary" href="#">Explore our rooms</a>
+        </div>
+      </section>
+
+      <section id="learning" class="section section-accent">
+        <div class="container split-grid">
+          <div>
+            <p class="eyebrow">Learning and development</p>
+            <h2>Learning built around your child</h2>
+            <p>Our curriculum follows the Early Years Foundation Stage and its seven areas of learning and development.</p>
+            <p>Children are observed by their key person and the wider team, helping staff understand their interests, progress and next steps. This information is then used to plan meaningful activities and learning opportunities.</p>
+            <p>As children approach school age, the team helps them prepare for the transition. During their final term, children are encouraged to talk about their new school, relevant information is gathered and new teachers are invited into the nursery where possible.</p>
+            <a class="text-link" href="#">Discover how children learn →</a>
+          </div>
+          <div class="image-placeholder landscape" role="img" aria-label="Placeholder for a learning activity photograph">
+            <span>Learning image placeholder</span>
+            <small>Real activity area, creative table or learning environment</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container split-grid reverse">
+          <div class="image-placeholder landscape" role="img" aria-label="Placeholder for a settling-in photograph">
+            <span>Settling-in image placeholder</span>
+          </div>
+          <div>
+            <p class="eyebrow">Settling in</p>
+            <h2>Time to settle at their own pace</h2>
+            <p>Every child responds differently to a new environment, so the settling-in process is flexible.</p>
+            <p>The first session usually lasts around 30 minutes, giving your child time to meet the team and begin becoming familiar with the nursery. Further visits are then arranged around how they respond, gradually building up to two hours.</p>
+            <p>There is no fixed number of visits. The nursery offers as many free settling-in sessions as your child needs so they can begin at a pace that feels right for them.</p>
+            <a class="text-link" href="#">How joining the nursery works →</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-muted">
+        <div class="container">
+          <p class="eyebrow">Why families choose The Wonder Years</p>
+          <h2>Care that supports the whole day</h2>
+          <div class="benefits-grid">
+            {benefits.map((benefit, index) => (
+              <article class="benefit-card">
+                <span class="icon-placeholder" aria-hidden="true">{index + 1}</span>
+                <h3>{benefit.title}</h3>
+                <p>{benefit.text}</p>
+              </article>
+            ))}
+          </div>
+          <a class="text-link" href="#">Learning, care and wellbeing →</a>
+        </div>
+      </section>
+
+      <section id="funding" class="section">
+        <div class="container funding-panel">
+          <div>
+            <p class="eyebrow">Funded childcare</p>
+            <h2>Making funded hours work for your family</h2>
+            <p>The nursery offers funded childcare for eligible working families from nine months old, Early Learning for Two places, universal funded childcare for three- and four-year-olds and up to 30 funded hours for eligible families.</p>
+            <p>Funded hours can usually be taken as 30 hours a week over 38 weeks or 22.5 hours a week over 50 weeks. Other patterns may be available, subject to availability.</p>
+            <p>The nursery also accepts Tax-Free Childcare and childcare vouchers.</p>
+            <p>Meals, snacks and nursery activities are included, with no separate consumables charge. Parents provide nappies, wipes, creams and sunscreen where needed.</p>
+            <a class="button" href="#">View funding and childcare options</a>
+          </div>
+          <aside class="summary-card">
+            <h3>At a glance</h3>
+            <ul>
+              <li>Funding from nine months</li>
+              <li>Term-time and stretched options</li>
+              <li>Tax-Free Childcare accepted</li>
+              <li>No separate food or activity charge</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section section-accent">
+        <div class="container review-grid">
+          <div class="ofsted-card">
+            <p class="eyebrow">Ofsted</p>
+            <h2>Ofsted rated Good</h2>
+            <p>The Wonder Years Day Nursery is rated <strong>Good</strong> by Ofsted.</p>
+            <a class="button button-secondary" href="#">Read our latest Ofsted report</a>
+          </div>
+          <div>
+            <p class="eyebrow">What parents say</p>
+            <div class="testimonial-grid">
+              <blockquote>“Parent testimonial placeholder focusing on care, communication or settling in.”<cite>Parent name or initials</cite></blockquote>
+              <blockquote>“A second testimonial placeholder offering a different kind of reassurance.”<cite>Parent name or initials</cite></blockquote>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="visit" class="section visit-section">
+        <div class="container visit-grid">
+          <div>
+            <p class="eyebrow">Arrange a visit</p>
+            <h2>Come and see whether it feels right</h2>
+            <p>A website can answer many questions, but the best way to decide whether a nursery is right for your child is to visit.</p>
+            <p>During your tour, you can meet the team, explore the rooms and talk about your child, the sessions you need and current availability.</p>
+            <div class="contact-details">
+              <a href="tel:01215566979">0121 556 6979</a>
+              <a href="mailto:manager@thewonderyearsdaynursery.com">manager@thewonderyearsdaynursery.com</a>
+            </div>
+            <a class="button" href="mailto:manager@thewonderyearsdaynursery.com?subject=Nursery tour enquiry">Arrange your nursery tour</a>
+          </div>
+          <div class="location-card">
+            <h3>Find us</h3>
+            <address>The Wonder Years Day Nursery<br />Arundel House<br />50 Church Hill<br />Wednesbury<br />West Midlands<br />WS10 9DJ</address>
+            <p>A small car park is available for parents, visitors and staff.</p>
+            <p><strong>Sat nav for the car park:</strong><br />WS10 9DH, Reservoir Passage</p>
+            <div class="image-placeholder map-placeholder"><span>Map placeholder</span><small>Embed only after cookie controls are agreed</small></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="final-cta">
+        <div class="container">
+          <h2>Start your child’s journey with The Wonder Years</h2>
+          <p>Meet the team, explore the nursery and talk to us about the childcare you are looking for.</p>
+          <div class="button-row centred">
+            <a class="button button-light" href="#visit">Arrange a visit</a>
+            <a class="button button-outline-light" href="tel:01215566979">Call 0121 556 6979</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div><strong>The Wonder Years Day Nursery Limited</strong><p>Company number: 08212428<br />Ofsted URN: 2710425</p></div>
+        <div><p>Arundel House, 50 Church Hill<br />Wednesbury, West Midlands, WS10 9DJ</p></div>
+        <nav aria-label="Footer navigation"><a href="#">Privacy Notice</a><a href="#">Cookie Information</a><a href="#">Complaints</a><a href="#visit">Contact</a></nav>
+      </div>
+    </footer>
+
+    <script>
+      const button = document.querySelector('.menu-button');
+      const nav = document.querySelector('.main-nav');
+      button?.addEventListener('click', () => {
+        const open = button.getAttribute('aria-expanded') === 'true';
+        button.setAttribute('aria-expanded', String(!open));
+        nav?.classList.toggle('is-open');
+      });
+    </script>
+  </body>
+</html>
