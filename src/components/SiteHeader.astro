@@ -1,0 +1,57 @@
+---
+const { current = '' } = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href={base} aria-label="The Wonder Years Day Nursery home">
+      <span class="logo-placeholder">LOGO</span>
+      <span>The Wonder Years<br /><small>Day Nursery</small></span>
+    </a>
+    <button class="menu-button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+    <nav id="main-nav" class="main-nav" aria-label="Primary navigation">
+      <a href={base} aria-current={current === 'home' ? 'page' : undefined}>Home</a>
+      <details class="nav-group">
+        <summary aria-current={current === 'about' ? 'page' : undefined}>About</summary>
+        <div class="submenu">
+          <a href={`${base}about/`}>About the Nursery</a>
+          <a href={`${base}meet-the-team/`}>Meet the Team</a>
+          <a href={`${base}safeguarding-inclusion/`}>Safeguarding, SEND and Inclusion</a>
+          <a href={`${base}ofsted/`}>Ofsted</a>
+          <a href={`${base}policies/`}>Policies</a>
+        </div>
+      </details>
+      <a href={`${base}rooms/`} aria-current={current === 'rooms' ? 'page' : undefined}>Our Rooms</a>
+      <details class="nav-group">
+        <summary aria-current={current === 'learning' ? 'page' : undefined}>Learning and Care</summary>
+        <div class="submenu">
+          <a href={`${base}learning-development/`}>Learning and Development</a>
+          <a href={`${base}food-everyday-care/`}>Food and Everyday Care</a>
+        </div>
+      </details>
+      <details class="nav-group">
+        <summary aria-current={current === 'fees' ? 'page' : undefined}>Fees and Joining</summary>
+        <div class="submenu">
+          <a href={`${base}fees-funding/`}>Fees and Funding</a>
+          <a href={`${base}joining-settling-in/`}>Joining and Settling In</a>
+        </div>
+      </details>
+      <details class="nav-group">
+        <summary aria-current={current === 'contact' ? 'page' : undefined}>Contact</summary>
+        <div class="submenu submenu-right">
+          <a href={`${base}contact/`}>Contact and Arrange a Visit</a>
+          <a href={`${base}contact/#faqs`}>FAQs</a>
+        </div>
+      </details>
+    </nav>
+  </div>
+</header>
+<script>
+  const button = document.querySelector('.menu-button');
+  const nav = document.querySelector('.main-nav');
+  button?.addEventListener('click', () => {
+    const open = button.getAttribute('aria-expanded') === 'true';
+    button.setAttribute('aria-expanded', String(!open));
+    nav?.classList.toggle('is-open');
+  });
+</script>
