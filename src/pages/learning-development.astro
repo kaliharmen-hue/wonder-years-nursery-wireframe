@@ -1,5 +1,210 @@
 ---
 const base = import.meta.env.BASE_URL;
-const areas = ['Communication and language','Personal, social and emotional development','Physical development','Literacy','Mathematics','Understanding the world','Expressive arts and design'];
+const areas = [
+  { title: 'Communication and language', text: 'Children are encouraged to listen, communicate, learn new words and express their thoughts, feelings and ideas.' },
+  { title: 'Personal, social and emotional development', text: 'Warm relationships and everyday experiences help children build confidence, understand emotions, develop independence and learn how to relate to others.' },
+  { title: 'Physical development', text: 'Movement, play and practical activities support coordination, physical confidence and the skills children need to become increasingly independent.' },
+  { title: 'Literacy', text: 'Stories, songs, conversations, mark-making and books help children develop an early enjoyment of language, reading and writing.' },
+  { title: 'Mathematics', text: 'Children begin to explore numbers, patterns, shapes, quantities and problem-solving through play and everyday experiences.' },
+  { title: 'Understanding the world', text: 'Activities and conversations help children become curious about people, places, nature, technology and the world around them.' },
+  { title: 'Expressive arts and design', text: 'Children are given opportunities to imagine, create and express themselves through art, music, movement, role play and other creative experiences.' },
+];
 ---
-<!doctype html><html lang="en-GB"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width"/><meta name="description" content="How The Wonder Years Day Nursery supports learning through the EYFS, Birth to 5 Matters, observations and preparation for school."/><title>Learning and Development | The Wonder Years Day Nursery</title><link rel="stylesheet" href={`${base}styles/global.css`}/></head><body><a class="skip-link" href="#main">Skip to content</a><div class="wireframe-banner">Learning and Development wireframe · Content and image placement for review</div><header class="site-header"><div class="container header-inner"><a class="brand" href={base}><span class="logo-placeholder">LOGO</span><span>The Wonder Years<br/><small>Day Nursery</small></span></a><nav class="main-nav"><a href={`${base}about/`}>About us</a><a href={`${base}rooms/`}>Our rooms</a><a href={`${base}learning-development/`} aria-current="page">Learning &amp; development</a><a href={`${base}fees-funding/`}>Fees &amp; funding</a><a href={`${base}contact/`}>Contact</a></nav></div></header><main id="main"><section class="section hero"><div class="container hero-grid"><div><p class="eyebrow">Learning and development</p><h1>Learning built around your child</h1><p class="lead">Our curriculum follows the Early Years Foundation Stage and is informed by Birth to 5 Matters. Through play, exploration and warm relationships, children are supported to build confidence and make progress at their own pace.</p><a class="button" href={`${base}contact/`}>Arrange a visit</a></div><div class="image-placeholder hero-image"><span>Learning image placeholder</span><small>Genuine photograph of a child engaged in an activity</small></div></div></section><section class="section section-muted"><div class="container"><p class="eyebrow">Our curriculum</p><h2>A connected approach to learning</h2><p class="section-intro">Young children learn across several areas at once. Our curriculum creates opportunities for meaningful, connected learning through everyday experiences, play and interaction.</p><div class="benefits-grid">{areas.map((area,index)=><article class="benefit-card"><span class="icon-placeholder">{index+1}</span><h3>{area}</h3></article>)}</div></div></section><section class="section"><div class="container split-grid"><div><p class="eyebrow">Observation and planning</p><h2>Following each child’s interests</h2><p>Children are observed by their key person and the wider nursery team. These observations help staff understand what interests each child, the skills they are developing and what their next steps may be.</p><p>The team uses this understanding to plan activities and experiences around the child’s interests and development.</p></div><div class="image-placeholder landscape"><span>Observation and play image placeholder</span></div></div></section><section class="section section-accent"><div class="container split-grid reverse"><div class="image-placeholder landscape"><span>School preparation image placeholder</span></div><div><p class="eyebrow">Preparing for school</p><h2>Helping children approach the next step with confidence</h2><p>In Grasshoppers, older children are supported as they prepare for school. During the final term, staff gather information about each child’s new school, talk to them about the change and, where possible, invite new teachers into the nursery.</p><a class="button button-secondary" href={`${base}rooms/`}>Explore our rooms</a></div></div></section><section class="final-cta"><div class="container"><h2>Come and see learning in action</h2><p>Meet the team, explore the rooms and talk about your child’s interests, development and individual needs.</p><a class="button button-light" href={`${base}contact/`}>Arrange a nursery visit</a></div></section></main></body></html>
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Discover how The Wonder Years Day Nursery supports children’s learning through the EYFS, Birth to 5 Matters, individual interests, key-person observations and preparation for school." />
+    <title>Learning and Development | The Wonder Years Day Nursery</title>
+    <link rel="stylesheet" href={`${base}styles/global.css`} />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="wireframe-banner">Learning and Development wireframe · Content and image placement for review</div>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href={base} aria-label="The Wonder Years Day Nursery home">
+          <span class="logo-placeholder">LOGO</span>
+          <span>The Wonder Years<br /><small>Day Nursery</small></span>
+        </a>
+        <button class="menu-button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+        <nav id="main-nav" class="main-nav" aria-label="Primary navigation">
+          <a href={`${base}about/`}>About us</a>
+          <a href={`${base}rooms/`}>Our rooms</a>
+          <a href={`${base}learning-development/`} aria-current="page">Learning &amp; development</a>
+          <a href={`${base}fees-funding/`}>Fees &amp; funding</a>
+          <a href={`${base}contact/`}>Contact</a>
+          <a class="button button-small" href={`${base}contact/`}>Arrange a visit</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="section hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Learning and development</p>
+            <h1>Learning built around your child</h1>
+            <p class="lead">At The Wonder Years Day Nursery, learning begins with getting to know each child as an individual.</p>
+            <p>Our curriculum follows the Early Years Foundation Stage and is informed by Birth to 5 Matters. Through play, exploration, meaningful activities and warm relationships, children are supported to build confidence, develop new skills and make progress at their own pace.</p>
+            <div class="button-row">
+              <a class="button button-secondary" href={`${base}rooms/`}>Explore our rooms</a>
+              <a class="button" href={`${base}contact/`}>Arrange a visit</a>
+            </div>
+          </div>
+          <div class="image-placeholder hero-image" role="img" aria-label="Placeholder for a child absorbed in an activity with a member of staff nearby">
+            <span>Learning hero image placeholder</span>
+            <small>Genuine photograph of a child absorbed in an activity, with a member of staff nearby and engaged</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-muted">
+        <div class="container">
+          <p class="eyebrow">A curriculum shaped around children</p>
+          <h2>More than a timetable of activities</h2>
+          <p>Young children do not separate learning into neat subjects. A conversation, a story, a creative activity or an outdoor experience can support several areas of development at the same time.</p>
+          <p>Our curriculum is designed as a connected, holistic experience. It is organised around the seven areas of learning and development within the Early Years Foundation Stage, while creating opportunities for children to explore ideas in ways that feel natural and meaningful to them.</p>
+          <p>The environment, activities and support offered in each room are adapted to the age, developmental stage and individual needs of the children who use it.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <p class="eyebrow">The Early Years Foundation Stage</p>
+          <h2>The seven areas of learning</h2>
+          <div class="benefits-grid learning-areas">
+            {areas.map((area, index) => (
+              <article class="benefit-card">
+                <span class="icon-placeholder" aria-hidden="true">{index + 1}</span>
+                <h3>{area.title}</h3>
+                <p>{area.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-accent">
+        <div class="container split-grid">
+          <div>
+            <p class="eyebrow">Following each child’s interests</p>
+            <h2>Observation that leads to meaningful learning</h2>
+            <p>Children are observed by their key person and the wider nursery team as they play, communicate and take part in everyday activities.</p>
+            <p>These observations help staff understand what interests and motivates each child, the skills they are developing, where they may need additional support and what their next steps could be.</p>
+            <p>The team uses this understanding to plan activities and experiences around the child’s interests and development. Staff then continue observing how the child responds, creating an ongoing cycle of observation, planning and learning.</p>
+            <p>This means activities are not chosen simply because they appear on a fixed timetable. They are intended to be relevant to the children currently in the room.</p>
+          </div>
+          <div class="image-placeholder landscape" role="img" aria-label="Placeholder for a staff member observing or joining a small-group activity">
+            <span>Observation and play image placeholder</span>
+            <small>Staff joining a small-group activity, or children engaged in creative or sensory play</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <p class="eyebrow">Learning through relationships and play</p>
+          <h2>Safe, known and ready to explore</h2>
+          <p>Children learn best when they feel safe, known and comfortable enough to explore.</p>
+          <p>The nursery team supports learning by providing activities and resources suited to each stage of development, joining children’s play and extending their ideas, encouraging conversation, curiosity and problem-solving, and giving children opportunities to make choices and develop independence.</p>
+          <p>Activities and support can be adapted to reflect individual learning styles and additional needs.</p>
+          <p>All children are treated as individuals. Where a child has an additional need or a different way of learning, appropriate support is put in place to help them participate, progress and reach their potential.</p>
+          <p class="notice"><strong>Kirsty Burke is the nursery SENDCO.</strong></p>
+          <span class="text-link">Read about SEND and inclusion</span>
+        </div>
+      </section>
+
+      <section class="section section-muted">
+        <div class="container split-grid reverse">
+          <div class="image-placeholder landscape" role="img" aria-label="Placeholder for learning activities in one of the nursery rooms">
+            <span>Nursery room learning image placeholder</span>
+            <small>Age-appropriate play and learning within one of the nursery rooms</small>
+          </div>
+          <div>
+            <p class="eyebrow">Learning in every room</p>
+            <h2>Support that develops as children grow</h2>
+            <p>The nursery’s rooms provide separate environments for babies, toddlers and preschool children. Each space is arranged around the needs of the children within that age group.</p>
+            <a class="button button-secondary" href={`${base}rooms/`}>Explore our rooms</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-accent">
+        <div class="container split-grid">
+          <div>
+            <p class="eyebrow">Preparing for school</p>
+            <h2>Helping children approach the next step with confidence</h2>
+            <p>Preparation for school is not limited to recognising letters or numbers. It also includes helping children communicate their needs, manage everyday tasks, develop relationships, cope with change and feel confident in a new environment.</p>
+            <p>The Grasshoppers room provides additional opportunities for older children to prepare for this transition.</p>
+            <p>During a child’s final term, the nursery gathers information about the school they will be attending and talks to them about what the change may involve. Where possible, teachers from their new school are invited into the nursery so they can meet the children in a familiar setting.</p>
+            <p>The aim is to make the move feel more familiar and help children approach their first days at school with curiosity and confidence.</p>
+          </div>
+          <div class="image-placeholder landscape" role="img" aria-label="Placeholder for older nursery children in an age-appropriate group activity">
+            <span>School preparation image placeholder</span>
+            <small>Older nursery children engaged in a group activity, books or imaginative play</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container split-grid reverse">
+          <div class="image-placeholder landscape" role="img" aria-label="Placeholder for an approved anonymised Famly app visual">
+            <span>Famly app visual placeholder</span>
+            <small>Approved anonymised screenshot with all personal information removed</small>
+          </div>
+          <div>
+            <p class="eyebrow">Keeping parents connected</p>
+            <h2>Sharing the moments that matter</h2>
+            <p>Parents know their children best, so communication between home and nursery is an important part of supporting their development.</p>
+            <p>Through the Famly app, parents can receive messages, photographs, video observations and everyday updates about their child’s activities, learning, meals, sleep and care.</p>
+            <p>This provides a clearer picture of the child’s nursery experience and gives families opportunities to share relevant information from home.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-muted">
+        <div class="container">
+          <p class="eyebrow">Learning that includes every child</p>
+          <h2>Meaningful opportunities to take part and progress</h2>
+          <p>Every child develops differently. The purpose of the curriculum is not to make children progress in exactly the same way or at the same speed.</p>
+          <p>The nursery team considers each child’s age and stage of development, interests and preferred ways of learning, home experiences, communication and emotional needs, and any additional support requirements.</p>
+          <p>Activities, resources and adult support can then be adapted so that every child has meaningful opportunities to take part and progress.</p>
+          <span class="text-link">Learn about safeguarding and inclusion</span>
+        </div>
+      </section>
+
+      <section class="final-cta">
+        <div class="container">
+          <h2>Come and see learning in action</h2>
+          <p>The best way to understand the nursery’s approach is to visit, explore the rooms and see how staff engage with the children.</p>
+          <p>During your visit, you can talk to the team about your child’s interests, development, routines and any support they may need.</p>
+          <div class="button-row centred">
+            <a class="button button-light" href={`${base}contact/`}>Arrange a nursery visit</a>
+            <a class="button button-outline-light" href="tel:01215566979">Call 0121 556 6979</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div><strong>The Wonder Years Day Nursery Limited</strong><p>Company number: 08212428<br />Ofsted URN: 2710425</p></div>
+        <div><p>Arundel House, 50 Church Hill<br />Wednesbury, West Midlands, WS10 9DJ</p></div>
+        <nav aria-label="Footer navigation"><a href="#">Privacy Notice</a><a href="#">Cookie Information</a><a href="#">Complaints</a><a href={`${base}contact/`}>Contact</a></nav>
+      </div>
+    </footer>
+
+    <script>
+      const button = document.querySelector('.menu-button');
+      const nav = document.querySelector('.main-nav');
+      button?.addEventListener('click', () => {
+        const open = button.getAttribute('aria-expanded') === 'true';
+        button.setAttribute('aria-expanded', String(!open));
+        nav?.classList.toggle('is-open');
+      });
+    </script>
+  </body>
+</html>
