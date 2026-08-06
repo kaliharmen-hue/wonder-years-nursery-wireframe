@@ -1,73 +1,150 @@
 ---
 import SiteHeader from '../components/SiteHeader.astro';
 const base = import.meta.env.BASE_URL;
+
+const faqs = [
+  { question: 'What ages of children do you accept?', answer: ['The nursery provides childcare from six weeks to 11 years old.', 'School-age children can attend during the school holidays up to Year 6, subject to availability.'] },
+  { question: 'Do you offer school pickups or after-school care?', answer: ['No. The nursery does not currently collect children from school or provide after-school care that requires school pickup.'] },
+  { question: 'What are your opening hours?', answer: ['The nursery is open Monday to Friday from 7.30am to 6pm.', 'It is open throughout the year apart from bank holidays, Christmas Eve and New Year’s Eve.'] },
+  { question: 'What types of sessions are available?', answer: ['The nursery offers full-day care, five-hour sessions and hourly childcare.', 'All sessions are subject to availability.'] },
+  { question: 'How do I arrange a visit?', answer: ['Telephone or email the nursery to make an appointment.', 'During your visit, the team will show you around and discuss your child, the sessions you need and current availability.'] },
+  { question: 'Do you have a waiting list?', answer: ['The nursery does not operate a traditional waiting list.', 'Places are booked using projected availability, so families can reserve a place in advance once they have decided they would like their child to attend.'] },
+  { question: 'How far ahead should I reserve a place?', answer: ['Families are encouraged to visit and reserve their place as early as possible. The nursery often accepts bookings around 12 months in advance.'] },
+  { question: 'What happens when my child starts settling in?', answer: ['The first settling-in visit usually lasts around 30 minutes. This gives your child an opportunity to meet the staff and begin becoming familiar with the environment.', 'Further visits are then arranged according to how your child responds, gradually building up to two hours.', 'The nursery offers as many free settling-in sessions as your child needs.'] },
+  { question: 'Do you offer funded childcare?', answer: ['Yes. The nursery offers funded childcare from nine months for eligible families.', 'This includes Early Learning for Two places, universal funded childcare for three- and four-year-olds and up to 30 funded hours for eligible families.', 'Funded hours can usually be taken as 30 hours a week over 38 weeks or 22.5 hours a week over 50 weeks. Other patterns may be available, subject to availability.'] },
+  { question: 'Do you accept Tax-Free Childcare and childcare vouchers?', answer: ['Yes. The nursery accepts Tax-Free Childcare and childcare vouchers.'] },
+  { question: 'Are food and activities included?', answer: ['Yes. Food, drinks and nursery activities are provided without a separate additional charge.', 'Parents provide their child’s nappies, wipes, creams and sunscreen where needed.'] },
+  { question: 'Do you cater for allergies and dietary requirements?', answer: ['Yes. Food is prepared and cooked on the premises by the nursery cook, and allergies and dietary requirements are catered for.'] },
+  { question: 'Is parking available?', answer: ['Yes. There is a small car park for parents, visitors and staff.', 'Use WS10 9DH, Reservoir Passage for the car park rather than the nursery’s main postal postcode.'] },
+  { question: 'Can I ask about additional needs before my child starts?', answer: ['Yes. Parents can discuss their child’s individual needs with the nursery before starting.', 'Kirsty Burke is the nursery SENDCO, and support is considered according to each child’s individual needs and way of learning.'] },
+];
 ---
 <!doctype html>
 <html lang="en-GB">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="description" content="Contact The Wonder Years Day Nursery, arrange a visit and find opening hours, directions and parking information." />
-    <title>Contact and Arrange a Visit | The Wonder Years Day Nursery</title>
+    <meta name="description" content="Contact The Wonder Years Day Nursery in Wednesbury to arrange a visit, ask about availability, sessions, funded childcare or holiday care." />
+    <title>Contact The Wonder Years Day Nursery | Wednesbury</title>
     <link rel="stylesheet" href={`${base}styles/global.css`} />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
-    <div class="wireframe-banner">Contact and Arrange a Visit wireframe · Enquiry form and FAQs for review</div>
+    <div class="wireframe-banner">Contact and Arrange a Visit wireframe · Content and form placement for review</div>
     <SiteHeader current="contact" />
+
     <main id="main">
       <section class="section hero">
-        <div class="container visit-grid">
-          <div>
+        <div class="container hero-grid">
+          <div class="hero-copy">
             <p class="eyebrow">Contact and arrange a visit</p>
-            <h1>Come and see whether it feels right</h1>
-            <p class="lead">Meet the team, explore the rooms and talk about your child, the sessions you need and current availability.</p>
-            <div class="contact-details">
-              <a href="tel:01215566979">0121 556 6979</a>
-              <a href="mailto:manager@thewonderyearsdaynursery.com">manager@thewonderyearsdaynursery.com</a>
-            </div>
-            <div class="contact-facts">
-              <article><h3>Opening hours</h3><p>Monday to Friday<br />7.30am to 6pm</p></article>
-              <article><h3>Nursery address</h3><p>Arundel House<br />50 Church Hill<br />Wednesbury<br />West Midlands<br />WS10 9DJ</p></article>
+            <h1>Contact The Wonder Years</h1>
+            <p class="lead">Choosing a nursery is a big decision, and the best way to find out whether The Wonder Years feels right for your child is to come and visit.</p>
+            <p>During your nursery tour, you can meet the team, look around the rooms and talk about your child, the sessions you need and current availability.</p>
+            <div class="button-row">
+              <a class="button" href="#enquiry">Arrange a nursery visit</a>
+              <a class="button button-secondary" href="tel:01215566979">Call 0121 556 6979</a>
             </div>
           </div>
-          <div class="location-card">
-            <h2>Find us</h2>
-            <p>A small car park is available.</p>
-            <p><strong>Sat nav for the car park:</strong><br />WS10 9DH, Reservoir Passage</p>
-            <div class="image-placeholder map-placeholder" role="img" aria-label="Map placeholder showing the nursery location"><span>Map placeholder</span></div>
+          <div class="image-placeholder hero-image" role="img" aria-label="Placeholder for a welcoming photograph of the nursery entrance or reception area">
+            <span>Nursery entrance image placeholder</span>
+            <small>A welcoming photograph of the nursery entrance, reception area or another recognisable part of the setting</small>
           </div>
         </div>
       </section>
 
       <section class="section section-muted">
         <div class="container">
+          <p class="eyebrow">Get in touch</p>
+          <h2>Contact details</h2>
+          <div class="contact-facts">
+            <article><h3>Telephone</h3><p><a href="tel:01215566979">0121 556 6979</a></p></article>
+            <article><h3>Email</h3><p><a href="mailto:manager@thewonderyearsdaynursery.com">manager@thewonderyearsdaynursery.com</a></p></article>
+            <article><h3>Address</h3><p>The Wonder Years Day Nursery<br />Arundel House<br />50 Church Hill<br />Wednesbury<br />West Midlands<br />WS10 9DJ</p></article>
+            <article><h3>Opening hours</h3><p>Monday to Friday, 7.30am to 6pm.</p><p>The nursery is open throughout the year apart from bank holidays, Christmas Eve and New Year’s Eve.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container split-grid">
+          <div>
+            <p class="eyebrow">Arrange a nursery tour</p>
+            <h2>Plan your visit</h2>
+            <p>Prospective parents are encouraged to telephone or email to make an appointment before visiting.</p>
+            <p>During the tour, the team can show you around the nursery, explain how the rooms are organised and discuss:</p>
+            <ul>
+              <li>your child’s age and needs;</li>
+              <li>the days or sessions you require;</li>
+              <li>your preferred start date;</li>
+              <li>funded childcare where relevant;</li>
+              <li>current and expected availability; and</li>
+              <li>the settling-in process.</li>
+            </ul>
+            <p>Availability varies according to the child’s age, the sessions required and the requested start date.</p>
+            <p>The nursery does not operate a traditional waiting list. Places are reserved based on projected availability, and families are encouraged to visit and book early because places are often reserved around 12 months in advance.</p>
+            <a class="button button-secondary" href="mailto:manager@thewonderyearsdaynursery.com?subject=Nursery%20visit%20enquiry">Email to arrange a visit</a>
+          </div>
+          <div class="location-card">
+            <p class="eyebrow">Parking and finding the nursery</p>
+            <h2>Directions</h2>
+            <p>A small car park is available for parents, visitors and staff.</p>
+            <p><strong>Main postal postcode:</strong><br />WS10 9DJ</p>
+            <p><strong>For the car park, use:</strong><br />WS10 9DH, Reservoir Passage</p>
+            <p>Reservoir Passage runs alongside the nursery car park.</p>
+            <div class="image-placeholder map-placeholder" role="img" aria-label="Map placeholder showing the nursery and car park location"><span>Map placeholder</span><small>Add a map or directions once privacy and cookie requirements have been agreed</small></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="enquiry" class="section section-accent">
+        <div class="container">
           <p class="eyebrow">Send an enquiry</p>
-          <h2>Tell us how we can help</h2>
+          <h2>Ask about childcare</h2>
+          <p class="section-intro">Use the form below to ask about a nursery visit, availability, sessions, funding or holiday care.</p>
           <form class="enquiry-form" onsubmit="event.preventDefault()">
             <div class="form-grid">
-              <div class="form-field"><label for="parent-name">Your name</label><input id="parent-name" name="name" type="text" autocomplete="name" /></div>
+              <div class="form-field"><label for="parent-name">Parent or carer name</label><input id="parent-name" name="name" type="text" autocomplete="name" /></div>
               <div class="form-field"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" /></div>
               <div class="form-field"><label for="phone">Telephone number</label><input id="phone" name="phone" type="tel" autocomplete="tel" /></div>
               <div class="form-field"><label for="child-age">Child’s age</label><input id="child-age" name="child-age" type="text" /></div>
-              <div class="form-field form-field-full"><label for="message">Your enquiry</label><textarea id="message" name="message"></textarea></div>
+              <div class="form-field"><label for="start-date">Preferred start date</label><input id="start-date" name="start-date" type="date" /></div>
+              <div class="form-field"><label for="sessions">Required days or sessions</label><input id="sessions" name="sessions" type="text" /></div>
+              <div class="form-field form-field-full"><label for="message">Enquiry</label><textarea id="message" name="message"></textarea></div>
             </div>
+            <p class="notice">Please do not include detailed medical, safeguarding or confidential information in this form. The nursery can discuss any individual support needs with you directly.</p>
             <button class="button" type="submit">Send enquiry</button>
           </form>
         </div>
       </section>
 
-      <section id="faqs" class="section section-accent">
+      <section id="faqs" class="section">
         <div class="container">
           <p class="eyebrow">Frequently asked questions</p>
           <h2>Questions parents often ask</h2>
-          <div class="faq-placeholder">
-            <h3>FAQ copy to be added</h3>
-            <p>Approved questions and answers will be added here as the content is developed.</p>
+          <div class="faq-list">
+            {faqs.map((faq) => (
+              <details class="faq-item">
+                <summary>{faq.question}</summary>
+                <div class="faq-answer">{faq.answer.map((paragraph) => <p>{paragraph}</p>)}</div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="final-cta">
+        <div class="container">
+          <h2>Ready to arrange a visit?</h2>
+          <p>Come and see the nursery, meet the team and talk to us about the childcare you are looking for.</p>
+          <div class="button-row centred">
+            <a class="button button-light" href="#enquiry">Arrange a nursery visit</a>
+            <a class="button button-outline-light" href="tel:01215566979">Call 0121 556 6979</a>
           </div>
         </div>
       </section>
     </main>
+
     <footer class="site-footer"><div class="container footer-grid"><div><strong>The Wonder Years Day Nursery Limited</strong><p>Company number: 08212428<br />Ofsted URN: 2710425</p></div><div><p>Arundel House, 50 Church Hill<br />Wednesbury, West Midlands, WS10 9DJ</p></div><nav aria-label="Footer navigation"><a href={`${base}contact/`}>Contact</a><a href={`${base}contact/#faqs`}>FAQs</a></nav></div></footer>
   </body>
 </html>
