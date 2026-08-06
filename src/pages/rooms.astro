@@ -22,12 +22,12 @@ const base = import.meta.env.BASE_URL;
         </a>
         <button class="menu-button" aria-expanded="false" aria-controls="main-nav">Menu</button>
         <nav id="main-nav" class="main-nav" aria-label="Primary navigation">
-          <a href={`${base}#about`}>About us</a>
+          <a href={`${base}about/`}>About us</a>
           <a href={`${base}rooms/`} aria-current="page">Our rooms</a>
-          <a href={`${base}#learning`}>Learning &amp; care</a>
-          <a href={`${base}#funding`}>Fees &amp; funding</a>
-          <a href={`${base}#visit`}>Contact</a>
-          <a class="button button-small" href={`${base}#visit`}>Arrange a visit</a>
+          <a href={`${base}learning-development/`}>Learning &amp; development</a>
+          <a href={`${base}fees-funding/`}>Fees &amp; funding</a>
+          <a href={`${base}contact/`}>Contact</a>
+          <a class="button button-small" href={`${base}contact/`}>Arrange a visit</a>
         </nav>
       </div>
     </header>
@@ -41,27 +41,12 @@ const base = import.meta.env.BASE_URL;
             <p class="lead">Our separate rooms give babies, toddlers and preschool children an environment suited to their age, stage of development and individual needs.</p>
             <p>We also welcome school-age children during the school holidays, up to Year 6, subject to availability.</p>
             <div class="button-row">
-              <a class="button" href={`${base}#visit`}>Arrange a visit</a>
-              <a class="button button-secondary" href="#room-guide">Explore the rooms</a>
+              <a class="button" href={`${base}contact/`}>Arrange a visit</a>
             </div>
           </div>
           <div class="image-placeholder hero-image" role="img" aria-label="Placeholder for a welcoming nursery room photograph">
             <span>Hero image placeholder</span>
             <small>Wide genuine photograph showing a welcoming nursery environment</small>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-muted" id="room-guide">
-        <div class="container">
-          <p class="eyebrow">Room guide</p>
-          <h2>Care that develops as children grow</h2>
-          <p class="section-intro">Every room is completely separate, allowing the team to shape routines, activities and resources around the children within that age group.</p>
-          <div class="facts-grid">
-            <article><h3>From six weeks</h3><p>Care begins in the independent baby unit for the nursery’s youngest children.</p></article>
-            <article><h3>Separate rooms</h3><p>Babies, toddlers and preschool children each have spaces suited to their stage.</p></article>
-            <article><h3>Individual needs</h3><p>Care and learning are adapted to the children using each room.</p></article>
-            <article><h3>Holiday care</h3><p>School-age children are welcomed during holidays up to Year 6, subject to availability.</p></article>
           </div>
         </div>
       </section>
@@ -125,7 +110,7 @@ const base = import.meta.env.BASE_URL;
             <h2>Holiday care up to Year 6</h2>
             <p>The nursery also accepts school-age children during the school holidays, up to Year 6.</p>
             <p>Places are subject to availability, so families should contact the nursery to discuss the dates and sessions they require.</p>
-            <a class="button button-secondary" href={`${base}#visit`}>Ask about holiday availability</a>
+            <a class="button button-secondary" href={`${base}contact/`}>Ask about holiday availability</a>
           </div>
         </div>
       </section>
@@ -165,7 +150,7 @@ const base = import.meta.env.BASE_URL;
           <h2>Come and explore the rooms</h2>
           <p>The best way to understand which room your child would join is to visit, meet the team and talk about their age, routines and individual needs.</p>
           <div class="button-row centred">
-            <a class="button button-light" href={`${base}#visit`}>Arrange a visit</a>
+            <a class="button button-light" href={`${base}contact/`}>Arrange a visit</a>
             <a class="button button-outline-light" href="tel:01215566979">Call 0121 556 6979</a>
           </div>
         </div>
@@ -176,7 +161,7 @@ const base = import.meta.env.BASE_URL;
       <div class="container footer-grid">
         <div><strong>The Wonder Years Day Nursery Limited</strong><p>Company number: 08212428<br />Ofsted URN: 2710425</p></div>
         <div><p>Arundel House, 50 Church Hill<br />Wednesbury, West Midlands, WS10 9DJ</p></div>
-        <nav aria-label="Footer navigation"><a href="#">Privacy Notice</a><a href="#">Cookie Information</a><a href="#">Complaints</a><a href={`${base}#visit`}>Contact</a></nav>
+        <nav aria-label="Footer navigation"><a href="#">Privacy Notice</a><a href="#">Cookie Information</a><a href="#">Complaints</a><a href={`${base}contact/`}>Contact</a></nav>
       </div>
     </footer>
 
