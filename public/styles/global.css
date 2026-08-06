@@ -39,6 +39,8 @@ section[id] { scroll-margin-top: 96px; }
 .section { padding: clamp(4rem, 7vw, 6.5rem) 0; }
 .section-muted { background: var(--soft); }
 .section-accent { background: var(--accent-soft); }
+.rooms-heading { padding: clamp(2rem, 4vw, 3rem) 0; text-align: center; }
+.rooms-heading h2 { margin: 0; }
 .skip-link { position: absolute; left: -9999px; }
 .skip-link:focus { left: 1rem; top: 1rem; z-index: 100; padding: .75rem 1rem; background: #fff; border: 2px solid var(--ink); }
 .wireframe-banner { padding: .45rem 1rem; text-align: center; background: #1f2528; color: #fff; font-size: .82rem; letter-spacing: .03em; }
