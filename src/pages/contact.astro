@@ -6,6 +6,7 @@ const faqs = [
   { question: 'What ages of children do you accept?', answer: ['The nursery provides childcare from six weeks to 11 years old.', 'School-age children can attend during the school holidays up to Year 6, subject to availability.'] },
   { question: 'Do you offer school pickups or after-school care?', answer: ['No. The nursery does not currently collect children from school or provide after-school care that requires school pickup.'] },
   { question: 'What are your opening hours?', answer: ['The nursery is open Monday to Friday from 7.30am to 6pm.', 'It is open throughout the year apart from bank holidays, Christmas Eve and New Year’s Eve.'] },
+  { question: 'What happens if my child is unwell?', answer: ['Read our guidance about when children should stay at home, what happens if a child becomes unwell at nursery and common exclusion periods.'], href: 'child-illness/', linkLabel: 'Read illness and exclusion guidance' },
   { question: 'What types of sessions are available?', answer: ['The nursery offers full-day care, five-hour sessions and hourly childcare.', 'All sessions are subject to availability.'] },
   { question: 'How do I arrange a visit?', answer: ['Telephone or email the nursery to make an appointment.', 'During your visit, the team will show you around and discuss your child, the sessions you need and current availability.'] },
   { question: 'Do you have a waiting list?', answer: ['The nursery does not operate a traditional waiting list.', 'Places are booked using projected availability, so families can reserve a place in advance once they have decided they would like their child to attend.'] },
@@ -126,7 +127,10 @@ const faqs = [
             {faqs.map((faq) => (
               <details class="faq-item">
                 <summary>{faq.question}</summary>
-                <div class="faq-answer">{faq.answer.map((paragraph) => <p>{paragraph}</p>)}</div>
+                <div class="faq-answer">
+                  {faq.answer.map((paragraph) => <p>{paragraph}</p>)}
+                  {faq.href && faq.linkLabel && <a class="text-link" href={`${base}${faq.href}`}>{faq.linkLabel}</a>}
+                </div>
               </details>
             ))}
           </div>

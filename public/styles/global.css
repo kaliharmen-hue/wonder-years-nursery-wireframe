@@ -150,6 +150,14 @@ blockquote cite { display: block; margin-top: 1rem; font-family: Arial, Helvetic
 .faq-item[open] summary::after { content: '−'; }
 .faq-answer { padding: 0 1.25rem 1.25rem; border-top: 1px solid var(--line); }
 .faq-answer p:last-child { margin-bottom: 0; }
+.table-scroll { max-width: 100%; margin: 2rem 0; overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; }
+.guidance-table { width: 100%; min-width: 680px; border-collapse: collapse; }
+.guidance-table th, .guidance-table td { padding: 1rem 1.15rem; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+.guidance-table thead th { background: var(--accent-dark); color: #fff; }
+.guidance-table tbody th { width: 34%; color: var(--accent-dark); }
+.guidance-table tbody tr:last-child th, .guidance-table tbody tr:last-child td { border-bottom: 0; }
+.guidance-table tbody tr:nth-child(even) { background: var(--accent-soft); }
+.guidance-update { max-width: 50rem; padding: 1rem 1.25rem; border-left: 4px solid var(--accent); background: var(--accent-soft); }
 .final-cta { padding: clamp(4rem, 7vw, 6rem) 0; text-align: center; background: var(--accent-dark); color: #fff; }
 .final-cta h2 { max-width: 18ch; margin-inline: auto; }
 .final-cta p { margin-inline: auto; }
