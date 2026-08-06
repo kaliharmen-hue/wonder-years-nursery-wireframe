@@ -1,0 +1,166 @@
+---
+const base = import.meta.env.BASE_URL;
+
+const groups = [
+  {
+    name: 'Leadership and support team',
+    staff: [
+      { name: 'Mandy Barker', title: 'Nursery Manager', based: 'Nursery office', qualifications: 'BA Honours Early Years', joined: '2007', favourite: 'Getting to know new families and greeting children when they arrive at nursery.', outside: 'Holistic therapy and crafts.' },
+      { name: 'Sarah Avery', title: 'Deputy Manager', based: 'Nursery office and honorary Bumblebee', qualifications: 'Level 4 Early Years', joined: '2003', favourite: 'Dressing up as different characters, dancing and sharing stories.', outside: 'Spending time with family and friends.' },
+      { name: 'Kevin Barker', title: 'Site Manager', based: 'Across the nursery, but usually in the workshop', qualifications: 'Level 2 Early Years', joined: '2009', favourite: 'Fixing broken toys and making the best toast.', outside: 'Growing vegetables.' },
+      { name: 'Joanne Hill', title: 'Nursery Chef', based: 'Kitchen', qualifications: 'Level 2 Food and Hygiene', joined: '2026', favourite: 'Preparing and trying out new food that everyone can enjoy.', outside: 'Watching Aston Villa football.' },
+    ],
+  },
+  {
+    name: 'Grasshoppers',
+    staff: [
+      { name: 'Kirsty Burke', title: 'Nursery Practitioner, SENDCO and Safeguarding Officer', based: 'Grasshoppers, ages three and over', qualifications: 'Foundation Degree in Early Years Studies', joined: '2010', favourite: 'Sensory and messy activities.', outside: 'Spending time with her children and family.' },
+      { name: 'Shuheda Begum', title: 'Senior Nursery Practitioner', based: 'Grasshoppers, ages three and over', qualifications: 'Level 3 Early Years', joined: '2010', favourite: 'Dancing and creative activities.', outside: 'Cooking.' },
+      { name: 'Jenny Kirkham', title: 'Nursery Practitioner', based: 'Grasshoppers, ages three and over', qualifications: 'Level 3 Early Years', joined: 'Year to be confirmed', favourite: 'Creating activities linked to space and the earth.', outside: 'Going on nature walks.' },
+      { name: 'Ellie Crutchley', title: 'Nursery Practitioner', based: 'Grasshoppers, ages three and over', qualifications: 'Level 3 Early Years', joined: '2024', favourite: 'Painting.', outside: 'Going on walks.' },
+    ],
+  },
+  {
+    name: 'Caterpillars',
+    staff: [
+      { name: 'Afia Geary', title: 'Senior Nursery Practitioner', based: 'Caterpillars, ages two to three', qualifications: 'Level 3', joined: '2010', favourite: 'Messy play.', outside: 'Watching television series and films on Netflix.' },
+      { name: 'Amie Higham', title: 'Nursery Practitioner', based: 'Caterpillars, ages two to three', qualifications: 'Level 4 Early Years', joined: '2006', favourite: 'Early maths activities.', outside: 'Spending time with her family and taking her children to different activities.' },
+      { name: 'Lydia Gregory', title: 'Nursery Assistant', based: 'Caterpillars, ages two to three', qualifications: 'Working towards Level 2', joined: '2025', favourite: 'Activities in the sand area.', outside: 'Playing and walking with her dog.' },
+    ],
+  },
+  {
+    name: 'Bumblebees',
+    staff: [
+      { name: 'Dawn Bullock', title: 'Nursery Practitioner', based: 'Bumblebees, ages two to three', qualifications: 'Foundation Degree in Early Years Studies', joined: '2006', favourite: 'Making playdough.', outside: 'Going to see live music.' },
+      { name: 'Hayley Moseley', title: 'Nursery Practitioner', based: 'Bumblebees, ages two to three', qualifications: 'Level 2 Early Years', joined: '2022', favourite: 'Water play.', outside: 'Baking cakes.' },
+      { name: 'Shannon Silvester', title: 'Nursery Practitioner', based: 'Bumblebees, ages two to three', qualifications: 'Level 3 Early Years', joined: '2015', favourite: 'Outdoor play.', outside: 'Being a mum to her girls.' },
+    ],
+  },
+  {
+    name: 'Ladybirds',
+    staff: [
+      { name: 'Shannon James', title: 'Nursery Practitioner', based: 'Ladybirds, ages birth to two', qualifications: 'Level 2, currently completing Level 3', joined: '2024', favourite: 'Water play.', outside: 'Watching West Bromwich Albion football.' },
+      { name: 'Jessica Hill', title: 'Nursery Practitioner', based: 'Ladybirds, ages birth to two', qualifications: 'Level 3 Early Years', joined: '2018', favourite: 'Reading stories, especially The Gruffalo.', outside: 'Baking.' },
+      { name: 'Aimee Collins', title: 'Nursery Practitioner', based: 'Ladybirds, ages birth to two', qualifications: 'Level 3 Early Years', joined: '2020', favourite: 'Circle time.', outside: 'Being a dog mum.' },
+      { name: 'Chantel Jones', title: 'Nursery Practitioner', based: 'Ladybirds, ages birth to two', qualifications: 'Level 3 Early Years', joined: '2023', favourite: 'Crafting and colouring.', outside: 'Travelling to different places.' },
+    ],
+  },
+  {
+    name: 'Dragonflies',
+    staff: [
+      { name: 'Rachael Jones', title: 'Senior Nursery Practitioner and Safeguarding Lead', based: 'Dragonflies, ages 18 months to two years', qualifications: 'Level 3 Early Years', joined: '2016', favourite: 'Outdoor play.', outside: 'Going to the caravan with her dog.' },
+      { name: 'Ruth Tyson', title: 'Nursery Practitioner', based: 'Dragonflies, ages 18 months to two years', qualifications: 'Level 3 Early Years', joined: '2017', favourite: 'Circle time, reading stories and dancing.', outside: 'Reading a good book and spending time with family and friends.' },
+      { name: 'Olivia Thompson', title: 'Nursery Practitioner', based: 'Dragonflies, ages 18 months to two years', qualifications: 'Level 3 Early Years', joined: '2021', favourite: 'Arts and crafts.', outside: 'Shopping.' },
+    ],
+  },
+];
+
+const initials = (name) => name.split(' ').map((part) => part[0]).join('');
+---
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Meet the nursery practitioners, managers and support staff at The Wonder Years Day Nursery." />
+    <title>Meet the Team | The Wonder Years Day Nursery</title>
+    <link rel="stylesheet" href={`${base}styles/global.css`} />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="wireframe-banner">Meet the Team wireframe · Content and image placement for review</div>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href={base} aria-label="The Wonder Years Day Nursery home">
+          <span class="logo-placeholder">LOGO</span>
+          <span>The Wonder Years<br /><small>Day Nursery</small></span>
+        </a>
+        <button class="menu-button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+        <nav id="main-nav" class="main-nav" aria-label="Primary navigation">
+          <a href={`${base}about/`} aria-current="page">About us</a>
+          <a href={`${base}rooms/`}>Our rooms</a>
+          <a href={`${base}learning-development/`}>Learning &amp; development</a>
+          <a href={`${base}fees-funding/`}>Fees &amp; funding</a>
+          <a href={`${base}contact/`}>Contact</a>
+          <a class="button button-small" href={`${base}contact/`}>Arrange a visit</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="section hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">The people who care for your child</p>
+            <h1>Meet the team</h1>
+            <p class="lead">The Wonder Years team brings together nursery practitioners, senior staff, managers and support staff who help care for children throughout the nursery day.</p>
+            <p>Each member of the team contributes different experience, interests and skills, while working together to help children feel safe, known and supported.</p>
+          </div>
+          <div class="image-placeholder hero-image" role="img" aria-label="Placeholder for an approved non-identifiable nursery environment photograph">
+            <span>Nursery environment image placeholder</span>
+            <small>Staff preparing an activity or another approved non-identifiable nursery image</small>
+          </div>
+        </div>
+      </section>
+
+      {groups.map((group, groupIndex) => (
+        <section class={`section ${groupIndex % 2 === 0 ? 'section-muted' : ''}`}>
+          <div class="container">
+            <h2>{group.name}</h2>
+            <div class="team-grid">
+              {group.staff.map((person) => (
+                <article class="staff-card">
+                  <div class="staff-photo" role="img" aria-label={`Staff photo placeholder for ${person.name}`}>
+                    <span class="staff-initials" aria-hidden="true">{initials(person.name)}</span>
+                    <small>Staff photo placeholder</small>
+                  </div>
+                  <div class="staff-card-body">
+                    <h3>{person.name}</h3>
+                    <p class="staff-title">{person.title}</p>
+                    <dl class="staff-details">
+                      <div><dt>Based in</dt><dd>{person.based}</dd></div>
+                      <div><dt>Qualifications</dt><dd>{person.qualifications}</dd></div>
+                      <div><dt>Joined The Wonder Years</dt><dd>{person.joined}</dd></div>
+                      <div><dt>Favourite activity with the children</dt><dd>{person.favourite}</dd></div>
+                      <div><dt>Outside the nursery</dt><dd>{person.outside}</dd></div>
+                    </dl>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      ))}
+
+      <section class="final-cta">
+        <div class="container">
+          <h2>Come and meet the team</h2>
+          <p>The best way to get a feel for the nursery is to visit, explore the rooms and meet the people who will be caring for your child.</p>
+          <div class="button-row centred">
+            <a class="button button-light" href={`${base}contact/`}>Arrange a nursery visit</a>
+            <a class="button button-outline-light" href="tel:01215566979">Call 0121 556 6979</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div><strong>The Wonder Years Day Nursery Limited</strong><p>Company number: 08212428<br />Ofsted URN: 2710425</p></div>
+        <div><p>Arundel House, 50 Church Hill<br />Wednesbury, West Midlands, WS10 9DJ</p></div>
+        <nav aria-label="Footer navigation"><a href="#">Privacy Notice</a><a href="#">Cookie Information</a><a href="#">Complaints</a><a href={`${base}contact/`}>Contact</a></nav>
+      </div>
+    </footer>
+
+    <script>
+      const button = document.querySelector('.menu-button');
+      const nav = document.querySelector('.main-nav');
+      button?.addEventListener('click', () => {
+        const open = button.getAttribute('aria-expanded') === 'true';
+        button.setAttribute('aria-expanded', String(!open));
+        nav?.classList.toggle('is-open');
+      });
+    </script>
+  </body>
+</html>
