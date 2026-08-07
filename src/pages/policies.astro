@@ -7,7 +7,7 @@ const base = import.meta.env.BASE_URL;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="description" content="Privacy and parent information from The Wonder Years Day Nursery." />
+    <meta name="description" content="Policies, privacy and parent information from The Wonder Years Day Nursery." />
     <title>Policies and Privacy | The Wonder Years Day Nursery</title>
     <link rel="stylesheet" href={`${base}styles/global.css`} />
   </head>
@@ -21,13 +21,14 @@ const base = import.meta.env.BASE_URL;
           <p class="eyebrow">Policies and parent information</p>
           <h1>Policies and privacy</h1>
           <p class="lead">Key information for families is available here. Further nursery policies can be added when approved for publication.</p>
-          <div class="cards-grid" style="grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); max-width: 800px; margin-top: 2rem;">
+          <div class="cards-grid" style="grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); max-width: 1000px; margin-top: 2rem;">
             <article class="card"><div class="card-body"><h2 style="font-size:2rem;">Privacy Notice</h2><p>How the nursery collects, uses, stores and shares personal information about children, families, visitors and website users.</p><a class="button button-secondary" href={`${base}privacy/`}>Read the Privacy Notice</a></div></article>
+            <article class="card"><div class="card-body"><h2 style="font-size:2rem;">Complaints Policy and Procedure</h2><p>How parents and carers can raise a concern or complaint, how the nursery will respond and when Ofsted can be contacted.</p><a class="button button-secondary" href={`${base}policies/complaints/`}>Read the Complaints Policy</a></div></article>
             <article class="card"><div class="card-body"><h2 style="font-size:2rem;">Illness and exclusion guidance</h2><p>Current guidance for parents on when children should stay at home and common exclusion periods.</p><a class="button button-secondary" href={`${base}child-illness/`}>Read illness guidance</a></div></article>
           </div>
         </div>
       </section>
     </main>
-    <footer class="site-footer"><div class="container footer-grid"><div><strong>The Wonder Years Day Nursery Limited</strong><p>Company number: 08212428<br />Ofsted URN: 2710425</p></div><div><p>Arundel House, 50 Church Hill<br />Wednesbury, West Midlands, WS10 9DJ</p></div><nav aria-label="Footer navigation"><a href={`${base}contact/`}>Contact</a><a href={`${base}privacy/`}>Privacy</a></nav></div></footer>
+    <footer class="site-footer"><div class="container footer-grid"><div><strong>The Wonder Years Day Nursery Limited</strong><p>Company number: 08212428<br />Ofsted URN: 2710425</p></div><div><p>Arundel House, 50 Church Hill<br />Wednesbury, West Midlands, WS10 9DJ</p></div><nav aria-label="Footer navigation"><a href={`${base}contact/`}>Contact</a><a href={`${base}privacy/`}>Privacy</a><a href={`${base}policies/`}>Policies</a></nav></div></footer>
   </body>
 </html>
