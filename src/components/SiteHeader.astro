@@ -30,14 +30,7 @@ const base = import.meta.env.BASE_URL;
           <a href={`${base}child-illness/`}>What Happens if My Child Is Unwell?</a>
         </div>
       </details>
-      <details class="nav-group">
-        <summary aria-current={current === 'fees' ? 'page' : undefined}>Funding and Joining</summary>
-        <div class="submenu">
-          <a href={`${base}fees-funding-joining/#payment-options`}>Payment Options</a>
-          <a href={`${base}fees-funding-joining/#funded-childcare`}>Funded Childcare</a>
-          <a href={`${base}fees-funding-joining/#joining-the-nursery`}>Joining the Nursery</a>
-        </div>
-      </details>
+      <a href={`${base}fees-funding-joining/`} aria-current={current === 'fees' ? 'page' : undefined}>Funding and Joining</a>
       <details class="nav-group">
         <summary aria-current={current === 'contact' ? 'page' : undefined}>Contact</summary>
         <div class="submenu submenu-right">

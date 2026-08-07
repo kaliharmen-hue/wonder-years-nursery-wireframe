@@ -92,16 +92,21 @@ const base = import.meta.env.BASE_URL;
       </section>
 
       <section class="section">
-        <div class="container funding-panel">
-          <div>
-            <p class="eyebrow">What is included</p>
+        <div class="container included-care-panel">
+          <div class="included-care-copy">
+            <p class="eyebrow">What’s included</p>
             <h2>Food, drinks and activities</h2>
-            <p>Food, drinks and nursery activities are included.</p>
-            <p>Meals and snacks are prepared and cooked on the premises by the nursery cook, and allergies and dietary requirements are catered for.</p>
+            <p class="lead">There are no separate charges for food, drinks or nursery activities.</p>
+            <a class="button button-secondary" href={`${base}food-everyday-care/`}>Find out more about food and everyday care</a>
           </div>
-          <div>
-            <h3>Parents provide their child’s:</h3>
-            <ul><li>nappies;</li><li>wipes;</li><li>creams; and</li><li>sunscreen, where these are needed.</li></ul>
+          <div class="included-care-details">
+            <h3>Included as part of your child’s time at nursery:</h3>
+            <ul class="included-care-list">
+              <li>meals and snacks;</li>
+              <li>drinks;</li>
+              <li>nursery activities and learning experiences.</li>
+            </ul>
+            <p class="parent-supplies">Parents provide nappies, wipes, creams and sunscreen where these are needed.</p>
           </div>
         </div>
       </section>

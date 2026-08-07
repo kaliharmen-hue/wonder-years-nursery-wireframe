@@ -119,7 +119,16 @@ h3 { line-height: 1.25; text-wrap: balance; }
 .staff-details div { padding: .75rem 0; border-top: 1px solid var(--line); }
 .staff-details dt { font-size: .78rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
 .staff-details dd { margin: .2rem 0 0; }
-.funding-panel { background: var(--soft); padding: clamp(1.5rem, 5vw, 3.5rem); align-items: start; border-radius: var(--radius); }
+.included-care-panel { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: var(--soft); box-shadow: 0 16px 34px rgba(38,50,54,.08); }
+.included-care-copy, .included-care-details { padding: clamp(2rem, 5vw, 3.5rem); }
+.included-care-copy { align-self: center; }
+.included-care-copy .button { margin-top: 1rem; }
+.included-care-details { background: var(--accent-dark); color: #fff; }
+.included-care-details h3 { margin: 0 0 1.5rem; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(1.55rem, 2.5vw, 2.1rem); font-weight: 500; }
+.included-care-list { display: grid; gap: 1rem; margin: 0; padding: 0; list-style: none; }
+.included-care-list li { position: relative; padding-left: 2.2rem; font-weight: 700; }
+.included-care-list li::before { content: '✓'; position: absolute; top: 0; left: 0; width: 1.55rem; height: 1.55rem; display: grid; place-items: center; border-radius: 50%; background: #fff; color: var(--accent-dark); font-size: .8rem; }
+.parent-supplies { margin: 2rem 0 0; padding: 1.25rem 0 0; border-top: 1px solid rgba(255,255,255,.35); }
 .funded-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: clamp(2.5rem, 6vw, 5rem); align-items: start; }
 .funded-overview > p { max-width: 38rem; }
 .funded-checklist { display: grid; gap: .8rem; margin: 1.5rem 0 0; padding: 0; list-style: none; }
@@ -199,7 +208,8 @@ blockquote cite { display: block; margin-top: 1rem; font-family: Arial, Helvetic
   .nav-group:hover:not([open]) > .submenu { display: none; }
   .nav-group[open] > .submenu { display: block; }
   .menu-button { display: inline-block; }
-  .hero-grid, .split-grid, .visit-grid, .funding-panel, .funded-grid, .review-grid { grid-template-columns: 1fr; gap: 2.25rem; }
+  .hero-grid, .split-grid, .visit-grid, .funded-grid, .review-grid, .included-care-panel { grid-template-columns: 1fr; gap: 2.25rem; }
+  .included-care-panel { gap: 0; }
   .hero-copy { max-width: 44rem; }
   .hero-image { min-height: 360px; aspect-ratio: 16 / 10; }
   .trust-strip, .facts-grid, .benefits-grid, .rooms-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
