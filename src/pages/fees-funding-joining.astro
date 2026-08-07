@@ -7,20 +7,20 @@ const base = import.meta.env.BASE_URL;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="description" content="Find out about childcare sessions, funded places, Tax-Free Childcare, arranging a nursery tour, reserving a place and settling in at The Wonder Years Day Nursery." />
-    <title>Fees, Funding and Joining the Nursery | The Wonder Years Day Nursery</title>
+    <meta name="description" content="Find out about childcare sessions, payment options, funded places, arranging a nursery tour, reserving a place and settling in at The Wonder Years Day Nursery." />
+    <title>Funding and Joining the Nursery | The Wonder Years Day Nursery</title>
     <link rel="stylesheet" href={`${base}styles/global.css`} />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
-    <div class="wireframe-banner">Fees, Funding and Joining wireframe · Content and image placement for review</div>
+    <div class="wireframe-banner">Funding and Joining wireframe · Content and image placement for review</div>
     <SiteHeader current="fees" />
     <main id="main">
       <section class="section hero">
         <div class="container hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow">Fees and joining</p>
-            <h1>Fees, Funding and Joining the Nursery</h1>
+            <p class="eyebrow">Funding and joining</p>
+            <h1>Funding and Joining the Nursery</h1>
             <p class="lead">We understand that choosing childcare involves both practical decisions and finding somewhere that feels right for your child.</p>
             <p>This page explains the sessions available at The Wonder Years, the funded childcare options the nursery accepts and what happens when you are ready to arrange a visit and reserve a place.</p>
             <div class="button-row">
@@ -35,7 +35,7 @@ const base = import.meta.env.BASE_URL;
         </div>
       </section>
 
-      <section class="section section-muted">
+      <section class="section section-muted" id="payment-options">
         <div class="container split-grid">
           <div>
             <p class="eyebrow">Childcare sessions</p>
@@ -55,22 +55,38 @@ const base = import.meta.env.BASE_URL;
         </div>
       </section>
 
-      <section class="section section-accent">
-        <div class="container">
-          <p class="eyebrow">Funded childcare</p>
-          <h2>Funded places from nine months</h2>
-          <p>The Wonder Years offers funded childcare from nine months old for eligible families.</p>
-          <p>This includes:</p>
-          <ul>
-            <li>funded childcare for eligible working families from nine months;</li>
-            <li>Early Learning for Two;</li>
-            <li>universal funded childcare for three- and four-year-olds; and</li>
-            <li>up to 30 funded hours for eligible families.</li>
-          </ul>
-          <p>Funded hours can be taken in different ways to help them work around family needs.</p>
-          <p>The usual options are:</p>
-          <ul><li>30 hours a week over 38 weeks of the year; or</li><li>22.5 hours a week over 50 weeks of the year.</li></ul>
-          <p>Other patterns may also be considered, subject to the nursery’s available sessions.</p>
+      <section class="section section-accent" id="funded-childcare">
+        <div class="container funded-grid">
+          <div class="funded-overview">
+            <p class="eyebrow">Funded childcare</p>
+            <h2>Funded places from nine months</h2>
+            <p>The Wonder Years offers funded childcare from nine months old for eligible families.</p>
+            <p>This includes:</p>
+            <ul class="funded-checklist">
+              <li>Funded childcare for eligible working families from nine months</li>
+              <li>Early Learning for Two</li>
+              <li>Universal funded childcare for three- and four-year-olds</li>
+              <li>Up to 30 funded hours for eligible families</li>
+            </ul>
+          </div>
+          <aside class="funded-hours-card" aria-labelledby="funded-hours-title">
+            <p class="eyebrow">How funded hours can be used</p>
+            <h3 id="funded-hours-title">Two usual attendance patterns</h3>
+            <p>Funded hours can be taken in different ways to help them work around family needs.</p>
+            <div class="funded-options">
+              <article class="funded-option">
+                <span class="hours-value">30</span>
+                <strong>hours a week</strong>
+                <p>Over 38 weeks of the year</p>
+              </article>
+              <article class="funded-option">
+                <span class="hours-value">22.5</span>
+                <strong>hours a week</strong>
+                <p>Over 50 weeks of the year</p>
+              </article>
+            </div>
+            <p class="funded-note">Other patterns may also be considered, subject to the nursery’s available sessions.</p>
+          </aside>
         </div>
       </section>
 
@@ -89,7 +105,7 @@ const base = import.meta.env.BASE_URL;
         </div>
       </section>
 
-      <section class="section section-muted">
+      <section class="section section-muted" id="joining-the-nursery">
         <div class="container split-grid">
           <div>
             <p class="eyebrow">Arranging a nursery visit</p>
@@ -136,7 +152,8 @@ const base = import.meta.env.BASE_URL;
           <ul>
             <li>your child’s age;</li><li>your preferred start date;</li><li>the days and hours you are looking for;</li><li>whether you may be eligible for funded childcare;</li><li>any dietary requirements or allergies; and</li><li>anything that may help the team understand your child’s routines or support needs.</li>
           </ul>
-          <p>If there is anything specific you need to know about fees, funding, sessions or joining the nursery, please contact the team directly.</p>
+          <p>If there is anything specific you need to know about payment options, funding, sessions or joining the nursery, please contact the team directly.</p>
+          <a class="button button-secondary" href={`${base}contact/`}>Contact the nursery</a>
         </div>
       </section>
 
