@@ -1,0 +1,32 @@
+---
+const base = import.meta.env.BASE_URL;
+---
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-identity">
+      <strong class="footer-title">The Wonder Years Day Nursery</strong>
+      <p>Warm, caring childcare for babies, toddlers and pre-school children in Wednesbury.</p>
+      <p class="footer-meta">The Wonder Years Day Nursery Limited<br />Company number: 08212428<br />Ofsted URN: 2710425</p>
+    </div>
+
+    <div class="footer-contact">
+      <h2>Contact details</h2>
+      <address>Arundel House<br />50 Church Hill<br />Wednesbury, West Midlands<br />WS10 9DJ</address>
+      <p>
+        <a href="tel:01215566979">0121 556 6979</a><br />
+        <a href="mailto:manager@thewonderyearsdaynursery.com">manager@thewonderyearsdaynursery.com</a>
+      </p>
+      <p><strong>Opening hours</strong><br />Monday to Friday, 7.30am to 6pm</p>
+    </div>
+
+    <nav class="footer-links" aria-label="Footer navigation">
+      <h2>Quick links</h2>
+      <a href={`${base}contact/`}>Contact</a>
+      <a href={`${base}fees-funding-joining/`}>Funding and Joining</a>
+      <a href={`${base}ofsted/`}>Ofsted</a>
+      <a href={`${base}policies/`}>Policies</a>
+      <a href={`${base}safeguarding-inclusion/`}>Safeguarding</a>
+      <a href={`${base}privacy/`}>Privacy</a>
+    </nav>
+  </div>
+</footer>

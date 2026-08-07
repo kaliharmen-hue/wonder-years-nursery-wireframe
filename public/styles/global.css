@@ -174,10 +174,17 @@ blockquote cite { display: block; margin-top: 1rem; font-family: Arial, Helvetic
 .final-cta { padding: clamp(4rem, 7vw, 6rem) 0; text-align: center; background: var(--accent-dark); color: #fff; }
 .final-cta h2 { max-width: 18ch; margin-inline: auto; }
 .final-cta p { margin-inline: auto; }
-.site-footer { padding: 2.5rem 0; border-top: 1px solid var(--line); font-size: .9rem; }
-.footer-grid { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 2rem; }
-.footer-grid nav { display: flex; flex-direction: column; gap: .15rem; }
-.footer-grid nav a { min-height: 40px; display: inline-flex; align-items: center; width: fit-content; }
+.site-footer { padding: clamp(3.5rem, 6vw, 5rem) 0; border-top: 1px solid var(--line); background: var(--accent-dark); color: #fff; font-size: .95rem; }
+.footer-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1.2fr) minmax(0, .75fr); gap: clamp(2.5rem, 6vw, 5rem); align-items: start; }
+.footer-title { display: block; max-width: 16ch; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(1.65rem, 2.5vw, 2.15rem); font-weight: 500; line-height: 1.15; }
+.footer-identity > p { max-width: 32rem; }
+.footer-meta { margin-top: 1.5rem; color: #dbe5e0; font-size: .84rem; }
+.site-footer h2 { margin: 0 0 1rem; font-family: Arial, Helvetica, sans-serif; font-size: .8rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #dbe5e0; }
+.footer-contact address { font-style: normal; }
+.footer-contact p { margin: 1rem 0 0; }
+.site-footer a { color: #fff; }
+.footer-links { display: flex; flex-direction: column; gap: .2rem; }
+.footer-links a { min-height: 40px; display: inline-flex; align-items: center; width: fit-content; }
 
 @media (min-width: 951px) {
   .reverse > :first-child { order: 0; }
@@ -197,6 +204,9 @@ blockquote cite { display: block; margin-top: 1rem; font-family: Arial, Helvetic
   .hero-image { min-height: 360px; aspect-ratio: 16 / 10; }
   .trust-strip, .facts-grid, .benefits-grid, .rooms-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .team-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .footer-links { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .footer-links h2 { grid-column: 1 / -1; }
   .reverse > :first-child { order: 1; }
 }
 
@@ -204,6 +214,8 @@ blockquote cite { display: block; margin-top: 1rem; font-family: Arial, Helvetic
   .section { padding: 3.5rem 0; }
   .container { width: min(calc(100% - 1.25rem), var(--max)); }
   .trust-strip, .facts-grid, .benefits-grid, .rooms-grid, .footer-grid { grid-template-columns: 1fr; }
+  .footer-links { grid-column: auto; display: flex; }
+  .footer-links h2 { grid-column: auto; }
   .team-grid { grid-template-columns: 1fr; }
   .trust-strip span { border-right: 0; border-bottom: 1px solid var(--line); }
   .trust-strip span:last-child { border-bottom: 0; }

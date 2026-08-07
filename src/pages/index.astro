@@ -1,5 +1,6 @@
 ---
 import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
 const base = import.meta.env.BASE_URL;
 const rooms = [
   { title: 'Ladybirds and Dragonflies', age: 'Babies and younger toddlers', text: 'Our separate baby unit provides a nurturing environment for children from six weeks to around two years old.' },
@@ -125,7 +126,7 @@ const rooms = [
       </section>
     </main>
 
-    <footer class="site-footer"><div class="container footer-grid"><div><strong>The Wonder Years Day Nursery Limited</strong><p>Company number: 08212428<br />Ofsted URN: 2710425</p></div><div><p>Arundel House, 50 Church Hill<br />Wednesbury, WS10 9DJ</p></div><nav aria-label="Footer navigation"><a href={`${base}contact/`}>Contact</a></nav></div></footer>
+    <SiteFooter />
 
   </body>
 </html>

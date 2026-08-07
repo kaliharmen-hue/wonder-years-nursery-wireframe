@@ -1,5 +1,6 @@
 ---
 import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
 const base = import.meta.env.BASE_URL;
 
 const groups = [
@@ -130,13 +131,7 @@ const initials = (name) => name.split(' ').map((part) => part[0]).join('');
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container footer-grid">
-        <div><strong>The Wonder Years Day Nursery Limited</strong><p>Company number: 08212428<br />Ofsted URN: 2710425</p></div>
-        <div><p>Arundel House, 50 Church Hill<br />Wednesbury, West Midlands, WS10 9DJ</p></div>
-        <nav aria-label="Footer navigation"><a href="#">Privacy Notice</a><a href="#">Cookie Information</a><a href="#">Complaints</a><a href={`${base}contact/`}>Contact</a></nav>
-      </div>
-    </footer>
+    <SiteFooter />
 
   </body>
 </html>
