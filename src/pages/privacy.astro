@@ -1,4 +1,131 @@
 ---
-import HoldingPage from '../components/HoldingPage.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+const base = import.meta.env.BASE_URL;
 ---
-<HoldingPage title="Privacy" section="" relatedHref="contact/" relatedLabel="Contact the nursery" />
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="How The Wonder Years Day Nursery Limited collects, uses, stores and shares personal information about children, families, visitors and website users." />
+    <title>Privacy Notice | The Wonder Years Day Nursery</title>
+    <link rel="stylesheet" href={`${base}styles/global.css`} />
+    <style>
+      .legal-wrap { max-width: 900px; }
+      .legal-wrap h1 { max-width: 16ch; }
+      .legal-wrap h2 { max-width: none; margin-top: 3rem; }
+      .legal-wrap h3 { margin-top: 2rem; }
+      .legal-wrap ul { max-width: 72ch; }
+      .legal-wrap li + li { margin-top: .35rem; }
+      .legal-meta { padding: 1rem 1.25rem; border-left: 4px solid var(--accent); background: var(--accent-soft); }
+      .legal-contact { padding: 1.25rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--soft); }
+      .table-scroll { overflow-x: auto; margin: 1.5rem 0; }
+      .retention-table { width: 100%; min-width: 680px; border-collapse: collapse; }
+      .retention-table th, .retention-table td { padding: .8rem; border: 1px solid var(--line); text-align: left; vertical-align: top; }
+      .retention-table th { background: var(--accent-soft); }
+      .external-links { display: grid; gap: .5rem; }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="wireframe-banner">Privacy Notice · Final copy for website review</div>
+    <SiteHeader current="about" />
+    <main id="main">
+      <section class="section">
+        <article class="container legal-wrap">
+          <p class="eyebrow">Privacy and data protection</p>
+          <h1>Privacy Notice</h1>
+          <div class="legal-meta"><strong>Last updated: August 2026</strong></div>
+          <p class="lead">The Wonder Years Day Nursery Limited is committed to protecting your privacy and handling personal information lawfully, fairly and securely.</p>
+          <p>This notice explains how we collect, use, store and share personal information relating to children attending or applying to attend the nursery, parents and carers, people who contact us or use our website, and visitors to the nursery.</p>
+
+          <h2>1. Who we are</h2>
+          <div class="legal-contact">
+            <p><strong>The Wonder Years Day Nursery Limited</strong><br />Company number: 08212428<br />Ofsted URN: 2710425</p>
+            <p>Arundel House<br />50 Church Hill<br />Wednesbury<br />West Midlands<br />WS10 9DJ</p>
+            <p><strong>Telephone:</strong> 0121 556 6979<br /><strong>Email:</strong> <a href="mailto:manager@thewonderyearsdaynursery.com">manager@thewonderyearsdaynursery.com</a></p>
+            <p>For questions about this notice or how we use personal information, contact <strong>Mandy Barker, Nursery Manager</strong>.</p>
+          </div>
+
+          <h2>2. The personal information we collect</h2>
+          <h3>Information about children</h3>
+          <p>We may collect:</p>
+          <ul><li>name, address and date of birth;</li><li>emergency contact information;</li><li>attendance records, booked sessions, absences and reasons for absence;</li><li>information about development, learning and progress;</li><li>observations, assessments and progress reports;</li><li>health, medication, immunisation, allergy and dietary information;</li><li>information about disabilities, special educational needs or additional support;</li><li>ethnicity, language, nationality and country of birth where required or relevant;</li><li>safeguarding information, including court orders and professional involvement;</li><li>information required to administer funded childcare;</li><li>photographs and videos where appropriate permissions or another lawful basis applies;</li><li>accident, incident and medication records;</li><li>information about previous and future education or childcare settings; and</li><li>other information needed to provide safe and appropriate care.</li></ul>
+          <h3>Information about parents, carers and authorised collectors</h3>
+          <p>We may collect names, addresses and contact details, relationship to the child, emergency contacts, information used to confirm that a person is authorised to collect a child, payment and funding information, correspondence, permissions and information needed to administer a childcare contract.</p>
+          <h3>Information collected through our website</h3>
+          <p>When you contact us through the website, we may collect your name, email address, telephone number, your child’s age, the childcare or sessions you are interested in, your preferred start date and information you include in your enquiry.</p>
+          <p class="notice">Please do not include unnecessary medical, safeguarding or other sensitive information in a general website enquiry.</p>
+          <h3>Information collected when visiting the nursery</h3>
+          <p>We may record your name, arrival and departure times, purpose of visit, the person you are visiting, vehicle registration where relevant, and information required for safeguarding, security and emergency purposes. Visitors currently sign in using the nursery’s paper visitor book.</p>
+
+          <h2>3. How we collect information</h2>
+          <p>We may collect information directly from parents and carers; through registration forms, contracts and introductory forms; during visits, meetings, telephone calls and email correspondence; through our website enquiry form and the Famly platform; from local authorities, health, education or social-care professionals and previous settings; through funding forms; and through records created by nursery staff.</p>
+          <p>Some information is required so that we can provide childcare, meet legal duties or administer funded places. Other information is optional.</p>
+
+          <h2>4. Why we use personal information</h2>
+          <p>We use children’s information to provide safe and individualised care, support learning and development, manage attendance and funded childcare, support medical, dietary and SEND needs, safeguard children, manage accidents and medication, communicate with families, support transitions, improve our services and meet Ofsted, EYFS and other legal requirements.</p>
+          <p>We use parents’ and carers’ information to respond to enquiries, arrange visits, administer nursery places and contracts, communicate about a child’s care, identify authorised collectors, administer payments and funding, respond to concerns or complaints and meet legal and regulatory duties.</p>
+          <p>Website information is used to respond to enquiries, arrange visits, discuss availability, maintain website security and operation, understand website use where appropriate cookie choices have been made, and keep a record of correspondence.</p>
+
+          <h2>5. Our lawful bases for using information</h2>
+          <p>Depending on the purpose, we may rely on <strong>contract</strong>, <strong>legal obligation</strong>, <strong>legitimate interests</strong>, <strong>consent</strong> or <strong>vital interests</strong>.</p>
+          <p>Where we rely on consent, you can withdraw it at any time. Withdrawal does not affect processing that took place before consent was withdrawn.</p>
+
+          <h2>6. Special-category information</h2>
+          <p>Some information is given extra protection under data-protection law. This can include information about health, disabilities, special educational needs, ethnicity, religion and certain safeguarding matters.</p>
+          <p>We only use special-category information where we have both an appropriate lawful basis under Article 6 of the UK GDPR and an appropriate condition under Article 9 and, where relevant, the Data Protection Act 2018. Depending on the purpose, this may include explicit consent, vital interests or processing necessary for reasons of substantial public interest. For safeguarding matters, the Data Protection Act 2018 includes a specific condition relating to safeguarding children and individuals at risk.</p>
+          <p>Where the law requires an Appropriate Policy Document, the nursery will maintain one.</p>
+
+          <h2>7. Criminal-offence and safeguarding information</h2>
+          <p>We may receive or use information relating to alleged or actual criminal offences where this is necessary as part of safeguarding, legal or regulatory responsibilities. Where Article 10 of the UK GDPR applies, we will only process this information where we have an Article 6 lawful basis and the processing is authorised by UK law, including an applicable Schedule 1 condition under the Data Protection Act 2018.</p>
+
+          <h2>8. Who we share information with</h2>
+          <p>We only share personal information where there is a lawful and appropriate reason to do so. Depending on the circumstances, this may include:</p>
+          <ul><li>schools or childcare settings a child moves to;</li><li>the relevant local authority;</li><li>Ofsted;</li><li>the Department for Education or organisations administering childcare funding;</li><li>healthcare professionals;</li><li>safeguarding partners, children’s services or the police;</li><li>emergency services;</li><li>professional advisers, insurers or legal representatives;</li><li>payment or banking providers;</li><li>providers of email, cloud storage, website hosting, website enquiry forms, IT or secure data-storage services;</li><li>Famly;</li><li>accountants or other business-service providers where they need access to personal information; and</li><li>other organisations where disclosure is required by law or necessary to protect a child or another person.</li></ul>
+          <p>We do not sell personal information. Information may sometimes be shared without consent, particularly where required by law or where necessary for safeguarding.</p>
+
+          <h2>9. Service providers and Famly</h2>
+          <p>We use selected service providers to help us operate the nursery. Where an organisation processes personal information on our behalf, we require appropriate data-protection arrangements to be in place.</p>
+          <h3>Famly</h3>
+          <p>The nursery uses <strong>Famly</strong> as its nursery-management and parent-communication platform. Depending on how the nursery uses the platform, information held in Famly may include child and parent contact details, attendance and absence information, care information such as meals, sleep and nappies, learning observations, photographs and files, messages and other records uploaded by authorised nursery users.</p>
+          <p>Parents and carers are given access through a secure, invitation-based account. The Wonder Years remains the <strong>data controller</strong> for information it places in Famly. <strong>Famly ApS acts as a data processor</strong> when it handles that information on the nursery’s behalf.</p>
+          <p>Famly’s current Data Processing Agreement states that its main platform hosting is provided through Amazon Web Services in <strong>Germany</strong>, with encrypted backups in <strong>Switzerland</strong>. Famly also uses authorised sub-processors, some of which may process limited information outside the UK, EEA or Switzerland for technical support or optional platform features, subject to appropriate transfer safeguards.</p>
+          <p>The nursery controls how long children’s records are kept in Famly and can export or permanently delete data using Famly’s data-management tools. Famly states that when a nursery’s contract with Famly ends, customer data is returned or deleted within 60 days unless another arrangement or legal requirement applies.</p>
+          <div class="external-links"><a class="text-link" href="https://www.famly.co/terms/famly-as-processor" target="_blank" rel="noopener noreferrer">Famly data processing information for families →</a><a class="text-link" href="https://www.famly.co/terms/data-processing-agreement" target="_blank" rel="noopener noreferrer">Famly Data Processing Agreement →</a></div>
+          <h3>Other service providers</h3>
+          <p>The nursery may also use providers for business email, cloud services, banking and payments, accounting, website hosting and website enquiries. These providers only receive information necessary for the service they provide and are required to handle it in accordance with applicable data-protection requirements.</p>
+          <p>The nursery currently uses a paper visitor sign-in book and does not use a third-party visitor-management system.</p>
+
+          <h2>10. International transfers</h2>
+          <p>Some service providers may store or access personal information outside the United Kingdom. Where this happens, we take steps to ensure that an appropriate legal safeguard applies. This may include UK adequacy regulations, the UK International Data Transfer Agreement, the UK Addendum to the EU Standard Contractual Clauses, an approved data-privacy framework, binding corporate rules or another safeguard permitted by UK law.</p>
+          <p>Famly’s primary platform hosting is in Germany and encrypted backups are held in Switzerland. Some authorised sub-processors may process limited information in other countries, including the United States, subject to the safeguards described in Famly’s Data Processing Agreement.</p>
+
+          <h2>11. How long we retain information</h2>
+          <p>We keep personal information only for as long as it is needed for the purpose for which it was collected and to meet legal, regulatory, safeguarding, insurance and contractual requirements.</p>
+          <div class="table-scroll"><table class="retention-table"><thead><tr><th>Type of information</th><th>Normal retention period or criteria</th></tr></thead><tbody>
+            <tr><td>General website enquiries where the child does not join</td><td>Up to 12 months</td></tr><tr><td>Enquiries about a future place</td><td>Up to 12 months after the enquiry is no longer active</td></tr><tr><td>Registration and parent-contract records</td><td>3 years after the child leaves, unless a longer period is required</td></tr><tr><td>Childcare, attendance and development records</td><td>3 years after the child leaves, unless a longer period is required</td></tr><tr><td>Accident and incident records</td><td>Kept for an appropriate period having regard to safeguarding, insurance and limitation requirements; records may need to be retained until the child reaches 21 years and 3 months</td></tr><tr><td>Medication and health records</td><td>3 years after the child leaves, unless a longer period is required</td></tr><tr><td>Safeguarding and child-protection records</td><td>Normally until the child’s 25th birthday; records relating to child sexual abuse may need to be kept until the child’s 75th birthday</td></tr><tr><td>SEND records</td><td>Normally until the child’s 25th birthday where the nature of the record justifies this</td></tr><tr><td>Funded-childcare records</td><td>4 years, or longer where required by the relevant funding authority</td></tr><tr><td>Financial and payment records</td><td>Up to 7 years</td></tr><tr><td>Complaints records</td><td>At least 3 years</td></tr><tr><td>Visitor records</td><td>Up to 6 years where needed for safeguarding, security or legal purposes</td></tr><tr><td>Famly records</td><td>Normally 3 years after the child leaves, subject to the category of record and any longer legal or safeguarding requirement</td></tr><tr><td>Photographs and videos</td><td>Kept only for as long as needed for the purpose for which they were taken</td></tr><tr><td>Website and security logs</td><td>Kept for as long as reasonably necessary for website operation, security and investigation of incidents</td></tr>
+          </tbody></table></div>
+          <p>Where there is an ongoing safeguarding concern, complaint, legal claim, regulatory requirement or insurance need, information may be retained for longer. When information is no longer required, it is securely deleted or destroyed.</p>
+
+          <h2>12. Photographs and videos</h2><p>We may take or receive photographs and videos to document learning and development, communicate securely with parents, create nursery displays and records, record events and activities, and for publicity or marketing where separate and appropriate permission has been obtained.</p><p>Private sharing through a secure parent platform is treated separately from public use on social media, the nursery website or promotional material. Photographs and videos are kept only for as long as needed for their purpose, subject to any legal or safeguarding reason to retain them.</p>
+
+          <h2>13. Website cookies and similar technologies</h2><p>Our website may use cookies and similar technologies that are necessary for it to work securely. If we use non-essential cookies, analytics or third-party content that requires consent, those technologies will not be activated until the appropriate choice has been made.</p><p>Further information will be provided through the website’s cookie information and controls where required.</p>
+
+          <h2>14. Security</h2><p>We take appropriate organisational and technical measures to protect personal information against accidental or unlawful loss, unauthorised access, improper disclosure, alteration, destruction or misuse.</p><p>Measures include secure storage of paper records, access controls and password protection for electronic systems, restricting access to staff who need information for their roles, staff training and confidentiality requirements, secure use of nursery systems and devices, and secure destruction or shredding when records are no longer required.</p><p>Staff do not use personal devices to access nursery records as part of normal nursery practice, and access to nursery systems is restricted to authorised users.</p>
+
+          <h2>15. Personal-data breaches</h2><p>We have procedures for identifying, investigating and responding to personal-data breaches. Where legally required, we will report a qualifying breach to the Information Commissioner’s Office and inform affected individuals where the breach is likely to result in a high risk to their rights and freedoms.</p>
+
+          <h2>16. Your data-protection rights</h2><p>Depending on the circumstances and the lawful basis being used, you may have the right to be informed, request access, request correction or erasure, restrict processing, object to certain uses, receive certain information in a portable format, withdraw consent and challenge certain decisions made solely by automated means.</p><p>These rights are not absolute. We may need to retain information to meet legal, safeguarding or regulatory requirements.</p><p>To exercise a right, contact <strong>Mandy Barker, Nursery Manager</strong> at <a href="mailto:manager@thewonderyearsdaynursery.com">manager@thewonderyearsdaynursery.com</a>.</p>
+
+          <h2>17. Automated decision-making</h2><p>We do not currently make decisions about children, parents or carers solely through automated processing where those decisions have legal or similarly significant effects.</p>
+
+          <h2>18. Complaints</h2><p>If you have concerns about how we use personal information, please contact us first so that we can investigate.</p><p><strong>Mandy Barker, Nursery Manager</strong><br />Email: <a href="mailto:manager@thewonderyearsdaynursery.com">manager@thewonderyearsdaynursery.com</a><br />Telephone: 0121 556 6979</p><p>You also have the right to complain to the Information Commissioner’s Office, the UK’s data-protection regulator.</p><p><strong>Information Commissioner’s Office</strong><br />Wycliffe House<br />Water Lane<br />Wilmslow<br />Cheshire<br />SK9 5AF<br />Telephone: 0303 123 1113</p><a class="text-link" href="https://ico.org.uk/make-a-complaint/" target="_blank" rel="noopener noreferrer">Make a complaint to the ICO →</a>
+
+          <h2>19. Changes to this privacy notice</h2><p>We may update this notice when our services or information-handling practices change, we introduce new systems or service providers, legal or regulatory requirements change, or the website is updated.</p><p>The current version will be published on our website with the last-updated date shown at the top. Where a change significantly affects how we use existing personal information, we will take reasonable steps to bring it to the attention of affected individuals.</p>
+        </article>
+      </section>
+    </main>
+    <footer class="site-footer"><div class="container footer-grid"><div><strong>The Wonder Years Day Nursery Limited</strong><p>Company number: 08212428<br />Ofsted URN: 2710425</p></div><div><p>Arundel House, 50 Church Hill<br />Wednesbury, West Midlands, WS10 9DJ</p></div><nav aria-label="Footer navigation"><a href={`${base}contact/`}>Contact</a><a href={`${base}privacy/`}>Privacy</a></nav></div></footer>
+  </body>
+</html>
