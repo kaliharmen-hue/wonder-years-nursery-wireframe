@@ -1,4 +1,33 @@
 ---
-import HoldingPage from '../components/HoldingPage.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+const base = import.meta.env.BASE_URL;
 ---
-<HoldingPage title="Policies" section="about" relatedHref="child-illness/" relatedLabel="Read illness and exclusion guidance" />
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Privacy and parent information from The Wonder Years Day Nursery." />
+    <title>Policies and Privacy | The Wonder Years Day Nursery</title>
+    <link rel="stylesheet" href={`${base}styles/global.css`} />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="wireframe-banner">Policies and privacy · Page index for review</div>
+    <SiteHeader current="about" />
+    <main id="main">
+      <section class="section">
+        <div class="container">
+          <p class="eyebrow">Policies and parent information</p>
+          <h1>Policies and privacy</h1>
+          <p class="lead">Key information for families is available here. Further nursery policies can be added when approved for publication.</p>
+          <div class="cards-grid" style="grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); max-width: 800px; margin-top: 2rem;">
+            <article class="card"><div class="card-body"><h2 style="font-size:2rem;">Privacy Notice</h2><p>How the nursery collects, uses, stores and shares personal information about children, families, visitors and website users.</p><a class="button button-secondary" href={`${base}privacy/`}>Read the Privacy Notice</a></div></article>
+            <article class="card"><div class="card-body"><h2 style="font-size:2rem;">Illness and exclusion guidance</h2><p>Current guidance for parents on when children should stay at home and common exclusion periods.</p><a class="button button-secondary" href={`${base}child-illness/`}>Read illness guidance</a></div></article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer"><div class="container footer-grid"><div><strong>The Wonder Years Day Nursery Limited</strong><p>Company number: 08212428<br />Ofsted URN: 2710425</p></div><div><p>Arundel House, 50 Church Hill<br />Wednesbury, West Midlands, WS10 9DJ</p></div><nav aria-label="Footer navigation"><a href={`${base}contact/`}>Contact</a><a href={`${base}privacy/`}>Privacy</a></nav></div></footer>
+  </body>
+</html>
