@@ -119,6 +119,20 @@ h3 { line-height: 1.25; text-wrap: balance; }
 .staff-details div { padding: .75rem 0; border-top: 1px solid var(--line); }
 .staff-details dt { font-size: .78rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
 .staff-details dd { margin: .2rem 0 0; }
+.funding-panel { padding: clamp(2rem, 5vw, 3.5rem); background: var(--soft); border-radius: var(--radius); align-items: start; }
+.button-stack { display: flex; flex-direction: column; gap: .8rem; align-items: flex-start; align-self: center; }
+.ofsted-rating-card { padding: clamp(2rem, 5vw, 3.5rem); border-radius: var(--radius); background: var(--accent-dark); color: #fff; box-shadow: 0 18px 40px rgba(38,50,54,.16); }
+.ofsted-rating-card .eyebrow { color: #dbe5e0; }
+.rating-word { display: block; margin: .25rem 0 .5rem; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(4rem, 8vw, 7rem); line-height: .95; }
+.rating-urn { margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid rgba(255,255,255,.35); }
+.ofsted-results { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1rem; }
+.ofsted-results article { padding: 1.35rem; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; }
+.ofsted-results h3 { margin: 0 0 1rem; font-size: 1rem; }
+.ofsted-results strong { color: var(--accent-dark); }
+.improvement-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
+.improvement-grid article { padding: clamp(1.5rem, 4vw, 2.5rem); border: 1px solid var(--line); border-radius: var(--radius); background: #fff; }
+.improvement-grid span { display: block; font-family: Georgia, 'Times New Roman', serif; font-size: 2.5rem; color: var(--accent-dark); }
+.improvement-grid p { margin-bottom: 0; }
 .included-care-panel { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: var(--soft); box-shadow: 0 16px 34px rgba(38,50,54,.08); }
 .included-care-copy, .included-care-details { padding: clamp(2rem, 5vw, 3.5rem); }
 .included-care-copy { align-self: center; }
@@ -208,11 +222,12 @@ blockquote cite { display: block; margin-top: 1rem; font-family: Arial, Helvetic
   .nav-group:hover:not([open]) > .submenu { display: none; }
   .nav-group[open] > .submenu { display: block; }
   .menu-button { display: inline-block; }
-  .hero-grid, .split-grid, .visit-grid, .funded-grid, .review-grid, .included-care-panel { grid-template-columns: 1fr; gap: 2.25rem; }
+  .hero-grid, .split-grid, .visit-grid, .funding-panel, .funded-grid, .review-grid, .included-care-panel { grid-template-columns: 1fr; gap: 2.25rem; }
   .included-care-panel { gap: 0; }
   .hero-copy { max-width: 44rem; }
   .hero-image { min-height: 360px; aspect-ratio: 16 / 10; }
   .trust-strip, .facts-grid, .benefits-grid, .rooms-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .ofsted-results { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .team-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .footer-links { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -232,6 +247,7 @@ blockquote cite { display: block; margin-top: 1rem; font-family: Arial, Helvetic
   .button-row { flex-direction: column; align-items: stretch; }
   .button-row .button { width: 100%; }
   .contact-facts, .form-grid { grid-template-columns: 1fr; }
+  .ofsted-results, .improvement-grid { grid-template-columns: 1fr; }
   .funded-options { grid-template-columns: 1fr; }
   .form-field-full { grid-column: auto; }
   h1 { font-size: clamp(2.7rem, 14vw, 3.5rem); }

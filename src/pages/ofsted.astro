@@ -1,4 +1,145 @@
 ---
-import HoldingPage from '../components/HoldingPage.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+const base = import.meta.env.BASE_URL;
 ---
-<HoldingPage title="Ofsted" section="about" />
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Read about The Wonder Years Day Nursery’s latest Ofsted inspection, its Good rating and the strengths highlighted in the official report." />
+    <title>Ofsted Report | The Wonder Years Day Nursery</title>
+    <link rel="stylesheet" href={`${base}styles/global.css`} />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="wireframe-banner">Ofsted page · Content and placement for review</div>
+    <SiteHeader current="about" />
+    <main id="main">
+      <section class="section hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Independent inspection</p>
+            <h1>Ofsted</h1>
+            <p class="lead">The Wonder Years Day Nursery Limited is registered with Ofsted.</p>
+            <p>The nursery’s latest inspection took place on <strong>1 October 2024</strong>, and the report was published on <strong>6 November 2024</strong>.</p>
+            <a class="button" href="https://reports.ofsted.gov.uk/provider/16/2710425" target="_blank" rel="noopener noreferrer">Read the latest Ofsted information</a>
+          </div>
+          <aside class="ofsted-rating-card" aria-label="Latest Ofsted inspection rating">
+            <p class="eyebrow">Latest inspection result</p>
+            <span class="rating-word">Good</span>
+            <p>Good in every area assessed</p>
+            <p class="rating-urn"><strong>Ofsted URN</strong><br />2710425</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section section-muted">
+        <div class="container">
+          <div class="section-intro">
+            <p class="eyebrow">Latest inspection result</p>
+            <h2>Good in every area</h2>
+            <p>The nursery received a <strong>Good</strong> judgement in every area assessed.</p>
+          </div>
+          <div class="ofsted-results">
+            <article><h3>Overall effectiveness</h3><strong>Good</strong></article>
+            <article><h3>Quality of education</h3><strong>Good</strong></article>
+            <article><h3>Behaviour and attitudes</h3><strong>Good</strong></article>
+            <article><h3>Personal development</h3><strong>Good</strong></article>
+            <article><h3>Leadership and management</h3><strong>Good</strong></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container split-grid">
+          <div>
+            <p class="eyebrow">What Ofsted said</p>
+            <h2>Children are happy and settled</h2>
+            <p>The report describes children as happy and settled within an inviting nursery. It also notes that parents spoke very positively about the nursery and said their children enjoy attending.</p>
+          </div>
+          <div class="summary-card">
+            <h3>Strengths highlighted in the report</h3>
+            <ul>
+              <li>children learn and play in a safe environment;</li>
+              <li>staff support language through stories and conversation;</li>
+              <li>children behave well and show kindness and respect;</li>
+              <li>the curriculum covers all seven areas of learning;</li>
+              <li>activities reflect children’s interests and next steps;</li>
+              <li>children receive varied, balanced homemade meals and snacks;</li>
+              <li>staff encourage independence and confidence;</li>
+              <li>settling-in sessions reflect individual children;</li>
+              <li>children and staff form close, caring relationships; and</li>
+              <li>safeguarding arrangements are effective.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-accent">
+        <div class="container split-grid">
+          <div>
+            <p class="eyebrow">Learning, care and development</p>
+            <h2>Understanding each child’s progress</h2>
+            <p>Inspectors found that staff gather useful information from parents when children start nursery.</p>
+            <p>The team uses observations and assessments to understand children’s progress, identify what they need to learn next and recognise where early or ongoing support may be needed.</p>
+            <ul>
+              <li>communication and language;</li>
+              <li>books and storytelling;</li>
+              <li>positive behaviour and independence;</li>
+              <li>healthy food and respectful personal care; and</li>
+              <li>helping children feel safe and secure.</li>
+            </ul>
+          </div>
+          <div class="funded-hours-card">
+            <p class="eyebrow">Safeguarding</p>
+            <h3>Effective arrangements</h3>
+            <p>Ofsted found that the nursery’s safeguarding arrangements are effective and described an open, positive safeguarding culture that puts children’s interests first.</p>
+            <a class="button button-secondary" href={`${base}safeguarding-send-inclusion/`}>Read about safeguarding, SEND and inclusion</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-muted">
+        <div class="container">
+          <div class="section-intro">
+            <p class="eyebrow">Areas for continued improvement</p>
+            <h2>Continuing to strengthen provision</h2>
+            <p>Ofsted identified two areas where the nursery could continue to develop following the inspection.</p>
+          </div>
+          <div class="improvement-grid">
+            <article><span>01</span><p>Plan more precisely during transition times so children remain engaged in learning.</p></article>
+            <article><span>02</span><p>Strengthen the ways children are encouraged to continue learning at home.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container funding-panel">
+          <div>
+            <p class="eyebrow">Official information</p>
+            <h2>Read the full Ofsted information</h2>
+            <p>View the nursery’s inspection history, official details and latest inspection report directly on the Ofsted website.</p>
+          </div>
+          <div class="button-stack">
+            <a class="button" href="https://reports.ofsted.gov.uk/provider/16/2710425" target="_blank" rel="noopener noreferrer">Visit the nursery’s Ofsted page</a>
+            <a class="button button-secondary" href="https://files.ofsted.gov.uk/v1/file/50260803" target="_blank" rel="noopener noreferrer">Open the latest inspection report</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="final-cta">
+        <div class="container">
+          <h2>Come and visit the nursery</h2>
+          <p>See the rooms, meet the team and ask questions about your child’s care.</p>
+          <div class="button-row centred">
+            <a class="button button-light" href={`${base}contact/#enquiry`}>Arrange a nursery visit</a>
+            <a class="button button-outline-light" href={`${base}contact/`}>Contact the nursery</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <SiteFooter />
+  </body>
+</html>
